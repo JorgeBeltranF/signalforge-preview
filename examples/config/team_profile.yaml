@@ -1,0 +1,12 @@
+schema_version: 2
+
+environment:
+  profile: PreviewTeam
+  system: ExampleSystem
+  stage: Staging
+  region: us-central
+  tenant: ExampleTenant
+
+load_topology:
+  generators_configured: 4
+  distributed_mode: true

@@ -1,0 +1,15 @@
+.venv/
+.venv*/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+temp/
+outputs/
+releases/*.zip
+releases/*.html
+media/screenshots/*.tmp
+media/gifs/*.tmp
+*.log
+.DS_Store
+Thumbs.db

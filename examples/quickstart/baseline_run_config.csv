@@ -1,0 +1,6 @@
+run_id,quickstart-baseline
+track,preview
+script,signalforge_quickstart_baseline.jmx
+workload,business-paced
+slaves,0
+apdex_t,1000

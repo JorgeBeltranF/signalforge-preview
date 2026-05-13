@@ -1,0 +1,6 @@
+run_id,quickstart-sample
+track,preview
+script,signalforge_quickstart.jmx
+workload,business-paced
+slaves,0
+apdex_t,1000

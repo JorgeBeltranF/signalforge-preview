@@ -1,0 +1,8 @@
+schema_version: 2
+
+run:
+  test_type: load
+
+environment:
+  system: ExampleSystem
+  profile: ExampleProfile

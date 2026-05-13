@@ -1,0 +1,29 @@
+schema_version: 2
+
+run:
+  run_id: PREVIEW-EXPERT-001
+  test_type: load
+  script: preview_demo.jmx
+  workload_profile: business_paced
+  apdex_t_ms: 1200
+
+environment:
+  system: ExampleSystem
+  profile: Staging
+  region: us-east
+  tenant: ExampleTenant
+
+load_topology:
+  generators_configured: 6
+  distributed_mode: true
+
+overrides:
+  apdex_t_ms:
+    value: 1500
+    reason: "Example override for a slower downstream dependency."
+  generators_configured:
+    value: 8
+    reason: "Example controller configuration change for a later run."
+  region:
+    value: us-west
+    reason: "Example failover validation."
