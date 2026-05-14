@@ -10,7 +10,7 @@ This preview is intentionally scoped to a small, credible workflow:
 ## What is in scope
 
 - JTL-first workflow
-- offline-friendly generated HTML
+- local-first generated HTML
 - compare-oriented regression review
 - endpoint-level evidence
 - visible evaluation context and preview defaults

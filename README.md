@@ -39,11 +39,15 @@ That combination matters:
 
 ## Quickstart
 
-The lowest-friction path is to run SignalForge from a preview bundle or local preview checkout that includes the packaged CLI files and the `examples/` folder.
+The fastest path is:
+
+1. download the preview bundle
+2. unzip it
+3. run the commands below from the unzipped bundle root
 
 ```powershell
 py -3 -m venv .venv
-.\.venv\Scripts\python.exe -m pip install .\dist\signalforge_preview-<version>-py3-none-any.whl
+.\.venv\Scripts\python.exe -m pip install .\dist\signalforge_preview-0.1.0-py3-none-any.whl
 cmd /c ".venv\Scripts\activate.bat && signalforge run examples/quickstart/sample.jtl --config examples/quickstart/sample_run_config.csv"
 cmd /c ".venv\Scripts\activate.bat && signalforge compare examples/quickstart/sample.jtl examples/quickstart/baseline.jtl --config examples/quickstart/sample_run_config.csv --compare-config examples/quickstart/baseline_run_config.csv"
 ```
@@ -87,7 +91,7 @@ The compare surface is not only a headline. It also gives you endpoint-level evi
 This preview is intentionally focused:
 
 - JTL-first input
-- local and offline-friendly workflow
+- local-first workflow
 - CLI plus HTML review flow
 - single-run interpretation
 - compare-oriented regression review
@@ -110,15 +114,17 @@ For a concise limitations summary, see [Known limitations](./docs/known-limitati
 
 ## Download Preview
 
-The intended install path for early users is a curated preview package rather than a broad source dump.
+**[Download SignalForge Preview 0.1.0](https://github.com/JorgeBeltranF/signalforge-preview/releases/download/v0.1.0-preview/signalforge-preview-0.1.0-bundle.zip)**
 
-That package should include:
+Includes:
 
-- the preview CLI package files
+- the preview CLI package
 - safe sample JTLs
 - sample config files
 - install instructions
 - the screenshot set shown here
+
+If you only want the runnable preview path, start with the bundle above instead of browsing the repo tree first.
 
 ## Preview License
 
