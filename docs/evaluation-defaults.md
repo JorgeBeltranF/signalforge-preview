@@ -4,6 +4,20 @@ SignalForge Preview can analyze a JTL with no extra config. When you do that, th
 
 That is useful for first-run evaluation, but those values are not meant to stand in for your production SLAs, SLOs, NFRs, or release policy.
 
+## Simple mental model
+
+| Category | Current preview support |
+| --- | --- |
+| Stable public overrides | Yes, a small subset |
+| Advanced context enrichment | Partial |
+| Full evaluation-policy tuning | Not yet exposed |
+
+In practice, that means:
+
+- the preview lets you tune a few visible decision inputs
+- context and profile files help the report explain a run more accurately
+- some evaluation policies remain fixed on purpose so first-run interpretation stays conservative and comparable
+
 ## Current preview defaults
 
 | Default | Current preview value | Used for |
@@ -37,9 +51,14 @@ In those cases, the report is still useful, but the verdict should be treated as
 
 The current preview intentionally keeps override paths narrow.
 
+### Stable public overrides
+
 - `apdex_t` can come from the run config CSV or be overridden with `--apdex-t`
 - compare degradation can be overridden with `--degradation-threshold`
-- run context and profile files are available for reusable run, workload, and environment context
+
+`--apdex-t` matters when your workload needs a different response-time tolerance for APDEX scoring than the preview default.
+
+`--degradation-threshold` matters when you want compare mode to be stricter or looser about what counts as a meaningful delta.
 
 Example CLI overrides:
 
@@ -55,6 +74,39 @@ run_id,release-candidate-01
 track,preview
 apdex_t,1500
 ```
+
+### Context and profile files
+
+`--context` and `--profile` are mainly for:
+
+- workload context
+- environment metadata
+- compare context
+- report provenance
+- interpretation enrichment
+
+They are useful when you want the report to better describe what kind of run was executed and under what conditions.
+
+They are not yet a full public evaluation-policy tuning surface.
+
+### What remains intentionally fixed
+
+Some evaluation policies remain intentionally fixed in the preview today, including:
+
+- sample sufficiency policy
+- normalization floors
+- representative-duration guidance
+
+That is deliberate. Keeping those checks fixed helps preserve interpretation consistency, reduces noisy conclusions from low-sample runs, and keeps the preview focused on conservative directional guidance instead of policy-heavy tuning.
+
+### Tuning tradeoffs
+
+Tuning can help, but it also changes how easy the output is to trust.
+
+- lower thresholds can increase noise sensitivity
+- weak sample counts can destabilize percentile interpretation
+- compare deltas become less trustworthy when the underlying evidence is thin
+- mismatched APDEX settings between runs can make APDEX deltas less useful in compare mode
 
 ## Provenance in the generated report
 

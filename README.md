@@ -92,6 +92,12 @@ SignalForge can run directly against a JTL with no extra config. In that case, t
 
 These are preview defaults, not your production SLAs, SLOs, NFRs, or release policy.
 
+| Category | Current preview support |
+| --- | --- |
+| Stable public overrides | Yes, a small subset |
+| Advanced context enrichment | Partial |
+| Full evaluation-policy tuning | Not yet exposed |
+
 | Default | Current preview value | Used for |
 | --- | --- | --- |
 | APDEX T | `1000 ms` | APDEX scoring |
@@ -104,7 +110,18 @@ These are preview defaults, not your production SLAs, SLOs, NFRs, or release pol
 
 Verdicts are directional guidance, not automatic release authority. They should be interpreted with workload, business, and system context.
 
-You can override part of this evaluation surface today through run config and CLI inputs such as `apdex_t`, `--apdex-t`, and `--degradation-threshold`. Generated reports also include a `Thresholds & Evaluation Context` section so reviewers can see whether visible decision criteria came from preview defaults or custom inputs.
+What you can tune cleanly today:
+
+- `--apdex-t` changes the APDEX target used for the current run
+- `--degradation-threshold` changes how sensitive compare mode is to visible deltas
+
+`--context` and `--profile` are mainly for workload context, environment metadata, compare context, and report provenance. They are useful, but they are not yet a full public threshold-tuning surface.
+
+Some policy checks remain intentionally fixed in the preview, including sample sufficiency, normalization floors, and representative-duration guidance. That keeps first-run interpretation more consistent and avoids noisy conclusions from weak evidence.
+
+Aggressive tuning can make the output easier to misread. Lower thresholds can increase noise sensitivity, and low-sample compares can make percentiles or deltas look more certain than they really are.
+
+Generated reports also include a `Thresholds & Evaluation Context` section so reviewers can see whether visible decision criteria came from preview defaults or custom inputs.
 
 For a little more detail, see [Evaluation defaults](./docs/evaluation-defaults.md) and [Configuration notes](./docs/config-contract.md).
 
