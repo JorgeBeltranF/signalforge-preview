@@ -11,7 +11,7 @@ environment:
   system: ExampleSystem
   profile: Staging
   region: us-east
-  tenant: ExampleTenant
+  tenant: PreviewTenant
 
 load_topology:
   generators_configured: 6

@@ -5,7 +5,7 @@ environment:
   system: ExampleSystem
   stage: Staging
   region: us-central
-  tenant: ExampleTenant
+  tenant: PreviewTenant
 
 load_topology:
   generators_configured: 4

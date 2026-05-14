@@ -13,7 +13,7 @@ The runnable preview should be distributed as a curated release package, such as
 
 ```powershell
 py -3 -m venv .venv
-.\.venv\Scripts\python.exe -m pip install .\dist\signalforge_preview-<version>-py3-none-any.whl
+.\.venv\Scripts\python.exe -m pip install .\dist\signalforge_preview-0.1.0-py3-none-any.whl
 cmd /c ".venv\Scripts\activate.bat && signalforge --help"
 ```
 
@@ -36,4 +36,5 @@ Direct venv executable invocation also works:
 - Python 3.10+ is recommended
 - installation may still need normal package download access for Python dependencies
 - the generated HTML preview itself is intended to be viewable offline after generation
+- the current supported preview path is Windows-first
 - this staging folder does not include the private runtime source tree

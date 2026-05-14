@@ -12,7 +12,7 @@ The public preview is intended to be installed from a curated release package ra
 
 ```powershell
 py -3 -m venv .venv
-.\.venv\Scripts\python.exe -m pip install .\dist\signalforge_preview-<version>-py3-none-any.whl
+.\.venv\Scripts\python.exe -m pip install .\dist\signalforge_preview-0.1.0-py3-none-any.whl
 cmd /c ".venv\Scripts\activate.bat && signalforge --version"
 ```
 
@@ -28,6 +28,7 @@ Expected result:
 
 - the CLI prints a compact `Product Verdict`
 - an HTML report is written next to the sample JTL unless `--output` is provided
+- the preview also writes `resolved_context.json` and an `__all_transactions.csv` export next to the generated HTML
 
 ## 4. Try compare
 
@@ -39,6 +40,7 @@ Expected result:
 
 - the CLI prints the compare summary
 - the HTML report highlights compare posture, deltas, and endpoint-level changes
+- the compare path also writes an `__all_transactions.csv` export for the generated compare HTML
 
 ## 5. Read the report in this order
 

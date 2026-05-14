@@ -25,6 +25,8 @@ That combination matters:
 - the HTML report gives you the evidence behind it
 - the compare workflow makes regressions easier to review than a raw JTL diff
 
+In compare mode, `Signal: Regression observed` does not automatically mean the overall release posture flipped to `FAIL`. It means the run changed in a way that deserves review, even when the broader compare posture still reads as `Comparable`.
+
 ## Compare-First Review
 
 ![SignalForge compare report](./media/screenshots/compare-hero.png)
@@ -45,6 +47,8 @@ The fastest path is:
 2. unzip it
 3. run the commands below from the unzipped bundle root
 
+The current documented preview path is Windows-first. It is the path that has been validated most heavily for this preview surface.
+
 ```powershell
 py -3 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install .\dist\signalforge_preview-0.1.0-py3-none-any.whl
@@ -56,6 +60,7 @@ What to expect:
 
 - the single-run command writes an HTML report next to the sample JTL unless `--output` is provided
 - the compare command writes a compare report that highlights posture, deltas, and endpoint changes
+- the preview also writes a resolved run-context file and transaction CSV exports next to the generated HTML
 - the sample config files make the demo report identity and context cleaner, but your own JTLs can still be reviewed without advanced setup
 
 More detail:
@@ -167,7 +172,7 @@ If you only want the runnable preview path, start with the bundle above instead 
 
 ## Preview License
 
-SignalForge Preview is currently source-available for evaluation, internal experimentation, and technical feedback.
+SignalForge Preview is currently distributed as a source-available technical preview for evaluation, internal experimentation, and technical feedback. The public GitHub repo is a curated preview surface, and the runnable preview source is shipped inside the installable bundle.
 
 It is not yet offered under a final open source or commercial license. See [LICENSE](./LICENSE) for the current preview terms.
 
