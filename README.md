@@ -86,6 +86,28 @@ SignalForge Preview is strongest when you want to:
 
 The compare surface is not only a headline. It also gives you endpoint-level evidence so you can inspect changed transactions, search quickly, and sort the drilldown by the dimension that matters most.
 
+## Thresholds & Evaluation Context
+
+SignalForge can run directly against a JTL with no extra config. In that case, the preview uses generic defaults so the report can still produce a readable verdict and compare posture.
+
+These are preview defaults, not your production SLAs, SLOs, NFRs, or release policy.
+
+| Default | Current preview value | Used for |
+| --- | --- | --- |
+| APDEX T | `1000 ms` | APDEX scoring |
+| P95 latency target | `5000 ms` | default global latency evaluation |
+| Error-rate target | `2.0%` | default global error evaluation |
+| Compare degradation threshold | `10%` | meaningful compare delta classification |
+| Minimum samples per endpoint | `200` | endpoint-level sufficiency checks |
+| Normalization sample floor | `500 total samples` | aggregate sample-quality classification |
+| Minimum representative duration | `10 min` | representative-duration checks |
+
+Verdicts are directional guidance, not automatic release authority. They should be interpreted with workload, business, and system context.
+
+You can override part of this evaluation surface today through run config and CLI inputs such as `apdex_t`, `--apdex-t`, and `--degradation-threshold`. Generated reports also include a `Thresholds & Evaluation Context` section so reviewers can see whether visible decision criteria came from preview defaults or custom inputs.
+
+For a little more detail, see [Evaluation defaults](./docs/evaluation-defaults.md) and [Configuration notes](./docs/config-contract.md).
+
 ## Preview Scope
 
 This preview is intentionally focused:
