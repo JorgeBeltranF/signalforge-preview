@@ -15,8 +15,9 @@ Release: Proceed
 
 === SignalForge Compare Summary ===
 Overall Compare Posture: Comparable
-Comparison Strength: HIGH
+Comparison Context: Medium
 Signal: Regression observed
+Context: Current-run thresholds may pass while compare still shows degradation against the baseline.
 ```
 
 That combination matters:
@@ -54,12 +55,14 @@ py -3 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install .\dist\signalforge_preview-0.1.0-py3-none-any.whl
 cmd /c ".venv\Scripts\activate.bat && signalforge run examples/quickstart/sample.jtl --config examples/quickstart/sample_run_config.csv"
 cmd /c ".venv\Scripts\activate.bat && signalforge compare examples/quickstart/sample.jtl examples/quickstart/baseline.jtl --config examples/quickstart/sample_run_config.csv --compare-config examples/quickstart/baseline_run_config.csv"
+cmd /c ".venv\Scripts\activate.bat && signalforge run examples/quickstart/sample_degraded.jtl --config examples/quickstart/sample_run_config.csv"
 ```
 
 What to expect:
 
 - the single-run command writes an HTML report next to the sample JTL unless `--output` is provided
 - the compare command writes a compare report that highlights posture, deltas, and endpoint changes
+- the degraded sample intentionally shows how a problematic run is presented; a `FAIL` exit code is expected for that sample
 - the preview also writes a resolved run-context file and transaction CSV exports next to the generated HTML
 - the sample config files make the demo report identity and context cleaner, but your own JTLs can still be reviewed without advanced setup
 
@@ -67,6 +70,7 @@ More detail:
 
 - [Install notes](./docs/install.md)
 - [Quickstart walkthrough](./docs/quickstart.md)
+- [Azure DevOps notes](./docs/azure-devops.md)
 
 ## Single-Run Executive View
 
@@ -139,6 +143,7 @@ This preview is intentionally focused:
 - CLI plus HTML review flow
 - single-run interpretation
 - compare-oriented regression review
+- optional experimental Dynatrace enrichment for advanced users
 
 This preview is intentionally not:
 
@@ -146,12 +151,13 @@ This preview is intentionally not:
 - an observability platform
 - a load generator
 - an automated release authority
+- broad APM support
 
 ## Known Limitations
 
 - This is still a preview surface, not a broad public release.
 - The current public demo set is intentionally small and curated.
-- Some deeper workflows and integrations are out of scope for the first preview.
+- Dynatrace enrichment is optional, experimental, and advanced-only.
 - Endpoint demo data is useful today, but still lighter than a richer future curated fixture.
 
 For a concise limitations summary, see [Known limitations](./docs/known-limitations.md).
@@ -164,6 +170,7 @@ Includes:
 
 - the preview CLI package
 - safe sample JTLs
+- the degraded sample JTL
 - sample config files
 - install instructions
 - the screenshot set shown here
@@ -188,6 +195,14 @@ Useful feedback for this preview includes:
 
 See [Feedback](./docs/feedback.md).
 
+## Experimental Dynatrace
+
+Dynatrace enrichment is included as an optional advanced preview path. It is YAML-only, uses token references through environment variables, and is limited to three bounded service-signal families.
+
+It does not change Product Verdict, Release, Advisory, Compare, JSON, or CI exit-code behavior. JTL analysis works fully without Dynatrace.
+
+See [Experimental Dynatrace](./docs/experimental-dynatrace.md).
+
 ## Preview Notice
 
 SignalForge Preview is meant to be practical, not theatrical. The goal is to make JTL review and compare easier to understand, easier to discuss, and easier to act on without pretending to replace engineering judgment.
@@ -197,7 +212,7 @@ SignalForge Preview is meant to be practical, not theatrical. The goal is to mak
 Planned workflow expansion may include:
 
 - historical compare and review workflows
-- optional APM-compatible evidence correlation
 - broader release-review analysis flows
+- broader integration ideas after real preview feedback
 
 These are not part of the current preview workflow.

@@ -9,6 +9,8 @@ The runnable preview should be distributed as a curated release package, such as
 - a wheel
 - or a packaged preview bundle with install instructions
 
+Cloning the public preview repository alone is not the primary install path. Start from the release bundle when you want to evaluate the runnable CLI quickly.
+
 ## Supported Windows preview path once the package is downloaded
 
 ```powershell

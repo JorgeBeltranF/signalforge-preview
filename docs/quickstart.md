@@ -42,7 +42,19 @@ Expected result:
 - the HTML report highlights compare posture, deltas, and endpoint-level changes
 - the compare path also writes an `__all_transactions.csv` export for the generated compare HTML
 
-## 5. Read the report in this order
+## 5. Try the degraded sample
+
+```powershell
+cmd /c ".venv\Scripts\activate.bat && signalforge run examples/quickstart/sample_degraded.jtl"
+```
+
+Expected result:
+
+- the report shows how SignalForge presents a problematic run
+- a `FAIL` exit code is expected for this sample
+- this is a demo fixture, not a production benchmark
+
+## 6. Read the report in this order
 
 1. `Product Verdict`
 2. `Release`
@@ -50,7 +62,7 @@ Expected result:
 4. `Evidence behind this verdict`
 5. `Endpoint Comparison`
 
-## 6. Optional context
+## 7. Optional context
 
 SignalForge preview is JTL-first. You can get a meaningful report without extra setup.
 

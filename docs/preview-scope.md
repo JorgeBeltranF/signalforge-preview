@@ -14,13 +14,17 @@ This preview is intentionally scoped to a small, credible workflow:
 - compare-oriented regression review
 - endpoint-level evidence
 - visible evaluation context and preview defaults
+- curated degraded sample for understanding failure presentation
+- optional experimental Dynatrace enrichment for advanced users
 
 ## What is not in scope
 
 - hosted SaaS workflows
-- observability platform integrations as part of normal onboarding
+- broad APM or observability platform integrations as part of normal onboarding
 - automatic release authority
 - deep configuration before first value
+- root-cause diagnosis
+- Comparable Runs Review or historical memory
 
 ## Positioning
 
