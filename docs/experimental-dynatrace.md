@@ -52,6 +52,49 @@ If Dynatrace enrichment is configured, the run may make outbound requests to the
 
 This is a local-first posture with an explicit external-enrichment option, not an offline guarantee.
 
+## Tenant Variability
+
+Dynatrace tenants vary significantly in how they are configured. SignalForge
+draws a deliberate line between platform behavior it assumes is stable and
+tenant configuration it expects to vary.
+
+Assumed stable across tenants:
+
+- Token-based authentication model
+- Metrics API endpoint structure
+- Standard HTTP semantics
+
+Expected to vary by tenant:
+
+- Service, host, and namespace naming conventions
+- Instrumentation depth and coverage gaps
+- Tagging discipline and tag availability
+- Management zone definitions and RBAC scoping
+
+SignalForge behavior under that variability:
+
+- Enrichment is opt-in and never required for the JTL verdict
+- Scope is conservative when namespace is unconfirmed
+- Missing data is treated neutrally, not as evidence
+- Fetch failures are operational, not semantic
+- Confidence is capped at MEDIUM for any enrichment-derived signal
+- No causation, root cause, or attribution claims are made from enrichment
+
+The goal is to degrade safely and honestly across heterogeneous tenants,
+not to support every tenant's configuration perfectly.
+
+## What You Will See in the Report
+
+When enrichment runs successfully, additional context appears in the
+Technical Analysis tab as a sanitized block reporting what Dynatrace
+observed during the JTL correlation window. Each signal carries an
+availability and confidence label.
+
+When enrichment is unavailable — no token, missing namespace, fetch failure,
+no data, malformed response — the block either renders an empty state with a
+sanitized reason or does not render. JTL analysis remains the source of
+verdict and advisory in all cases.
+
 ## Current Limits
 
 - Dynatrace enrichment is experimental.

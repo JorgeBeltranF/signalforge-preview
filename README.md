@@ -177,6 +177,10 @@ Includes:
 
 If you only want the runnable preview path, start with the bundle above instead of browsing the repo tree first.
 
+## Engineering Source
+
+If you are evaluating SignalForge and would like to discuss access to the engineering source, open an issue in this repository. There is no formal application process — if the interest is genuine, the conversation will follow.
+
 ## Preview License
 
 SignalForge Preview is currently distributed as a source-available technical preview for evaluation, internal experimentation, and technical feedback. The public GitHub repo is a curated preview surface, and the runnable preview source is shipped inside the installable bundle.
