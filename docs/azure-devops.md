@@ -19,7 +19,7 @@ Adapt the package path to wherever your pipeline downloads or stores the preview
   inputs:
     targetType: inline
     script: |
-      py -3 -m pip install .\dist\signalforge_preview-0.1.0-py3-none-any.whl
+      py -3 -m pip install .\dist\signalforge_preview-0.1.1-py3-none-any.whl
 ```
 
 ## Single Run

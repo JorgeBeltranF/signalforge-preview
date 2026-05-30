@@ -52,7 +52,7 @@ The current documented preview path is Windows-first. It is the path that has be
 
 ```powershell
 py -3 -m venv .venv
-.\.venv\Scripts\python.exe -m pip install .\dist\signalforge_preview-0.1.0-py3-none-any.whl
+.\.venv\Scripts\python.exe -m pip install .\dist\signalforge_preview-0.1.1-py3-none-any.whl
 cmd /c ".venv\Scripts\activate.bat && signalforge run examples/quickstart/sample.jtl --config examples/quickstart/sample_run_config.csv"
 cmd /c ".venv\Scripts\activate.bat && signalforge compare examples/quickstart/sample.jtl examples/quickstart/baseline.jtl --config examples/quickstart/sample_run_config.csv --compare-config examples/quickstart/baseline_run_config.csv"
 cmd /c ".venv\Scripts\activate.bat && signalforge run examples/quickstart/sample_degraded.jtl --config examples/quickstart/sample_run_config.csv"
@@ -164,7 +164,7 @@ For a concise limitations summary, see [Known limitations](./docs/known-limitati
 
 ## Download Preview
 
-**[Download SignalForge Preview 0.1.0](https://github.com/JorgeBeltranF/signalforge-preview/releases/download/v0.1.0-preview/signalforge-preview-0.1.0-bundle.zip)**
+**[Download SignalForge Preview 0.1.1](https://github.com/JorgeBeltranF/signalforge-preview/releases/download/v0.1.1-preview/signalforge-preview-0.1.1-bundle.zip)**
 
 Includes:
 
@@ -204,6 +204,10 @@ See [Feedback](./docs/feedback.md).
 Dynatrace enrichment is included as an optional advanced preview path. It is YAML-only, uses token references through environment variables, and is limited to three bounded service-signal families.
 
 It does not change Product Verdict, Release, Advisory, Compare, JSON, or CI exit-code behavior. JTL analysis works fully without Dynatrace.
+
+When Dynatrace enrichment returns data for the same execution window, the Insights tab adds an experimental Evidence Relationships section. It shows, per signal family, whether a JTL observation was independently corroborated by Dynatrace — without claiming causality.
+
+![SignalForge Evidence Relationships](./media/screenshots/evidence-relationships.png)
 
 See [Experimental Dynatrace](./docs/experimental-dynatrace.md).
 

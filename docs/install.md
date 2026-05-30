@@ -15,7 +15,7 @@ Cloning the public preview repository alone is not the primary install path. Sta
 
 ```powershell
 py -3 -m venv .venv
-.\.venv\Scripts\python.exe -m pip install .\dist\signalforge_preview-0.1.0-py3-none-any.whl
+.\.venv\Scripts\python.exe -m pip install .\dist\signalforge_preview-0.1.1-py3-none-any.whl
 cmd /c ".venv\Scripts\activate.bat && signalforge --help"
 ```
 

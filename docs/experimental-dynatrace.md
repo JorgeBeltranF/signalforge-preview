@@ -95,6 +95,12 @@ no data, malformed response — the block either renders an empty state with a
 sanitized reason or does not render. JTL analysis remains the source of
 verdict and advisory in all cases.
 
+When enrichment runs with actionable data, an Evidence Relationships
+(Experimental) section also appears in the Insights tab. It shows, per signal
+family, whether the JTL observation and the Dynatrace signal were
+independently corroborated during the same execution window. It does not claim
+causality, attribution, or root cause.
+
 ## Current Limits
 
 - Dynatrace enrichment is experimental.
