@@ -1,0 +1,37 @@
+# Example context file that enables the optional, experimental Dynatrace
+# enrichment. JTL analysis works fully without this — Dynatrace stays OFF
+# unless a `dynatrace` block like the one below is present.
+#
+# Run it with:
+#   signalforge run results.jtl --context dynatrace.yaml
+
+schema_version: 2
+
+# Optional run/environment metadata (helps the report describe the run).
+run:
+  test_type: load
+
+environment:
+  system: ExampleSystem
+  profile: ExampleProfile
+
+# --- Dynatrace enrichment (optional, experimental, SaaS-only) ---
+dynatrace:
+  # Dynatrace SaaS environment ID — the subdomain only, NOT the full URL.
+  #   URL:        https://abc12345.live.dynatrace.com
+  #   tenant_id:  abc12345
+  # Preview limitation: Dynatrace Managed and *.apps.dynatrace.com tenants
+  # are not supported by this client path.
+  # May be a literal or an ${ENV_VAR} reference.
+  tenant_id: ${DT_TENANT_ID}
+
+  # API token with the Read metrics (metrics.read) scope. Nothing else is needed.
+  # Do NOT place the raw token in the YAML — raw tokens are rejected.
+  # Always use an environment-variable reference.
+  api_token: ${DT_API_TOKEN}
+
+  # User-provided workload/environment scope hint.
+  # Preview limitation: this does NOT filter Dynatrace API queries.
+  # It only marks the enrichment as scoped by user intent, raising confidence
+  # from LOW to MEDIUM. Service ownership verification is deferred.
+  namespace: my-load-test-scope

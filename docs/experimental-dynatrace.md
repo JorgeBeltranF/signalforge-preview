@@ -14,13 +14,48 @@ When explicitly configured, SignalForge may request three bounded service-signal
 
 This context is enrichment only. It is not root-cause analysis, topology validation, service ownership validation, or release authority.
 
-## Activation
+## Activation — from zero to first enrichment
 
 Dynatrace activates only through a `dynatrace` block in a YAML context file.
-
 Environment variables alone do not activate enrichment.
 
-Example:
+A ready-to-copy template lives at `examples/config/dynatrace.yaml`.
+
+### 1. Create a Dynatrace API token
+
+Create an API token with a single scope:
+
+- Read metrics (`metrics.read`)
+
+No other scope is required. SignalForge only calls the Metrics v2 API
+(`/api/v2/metrics/query`) for three service metrics: service response time,
+service error rate, and service request count.
+
+### 2. Find your environment ID
+
+Use only the Dynatrace SaaS environment ID, not the full URL.
+
+```text
+URL:        https://abc12345.live.dynatrace.com
+tenant_id:  abc12345
+```
+
+Preview limitation: Dynatrace Managed and `*.apps.dynatrace.com` tenants are
+not supported by this client path.
+
+### 3. Set the environment variables
+
+The raw token must never be written in the YAML. Reference it from an
+environment variable.
+
+PowerShell:
+
+```powershell
+$env:DT_TENANT_ID = "abc12345"
+$env:DT_API_TOKEN = "dt0c01.XXXXXXXX..."
+```
+
+### 4. Create the context file
 
 ```yaml
 schema_version: 2
@@ -28,10 +63,55 @@ schema_version: 2
 dynatrace:
   tenant_id: ${DT_TENANT_ID}
   api_token: ${DT_API_TOKEN}
-  namespace: example-namespace
+  namespace: my-load-test-scope
 ```
 
-Token values must be referenced with `${ENV_VAR}` syntax. Raw token values in YAML are rejected.
+See `examples/config/dynatrace.yaml` for a fully commented version.
+
+### 5. Run with the context file
+
+```powershell
+signalforge run results.jtl --context dynatrace.yaml
+```
+
+If enrichment succeeds, a Dynatrace block appears in the Technical Analysis
+tab, and — when the data is actionable — an Evidence Relationships
+(Experimental) section appears in the Insights tab.
+
+## Field Reference
+
+### `tenant_id`
+
+The Dynatrace SaaS environment ID (the subdomain only), not the full URL.
+May be a literal or an `${ENV_VAR}` reference.
+
+Preview limitation: Dynatrace Managed and `*.apps.dynatrace.com` tenants are
+not supported by this client path.
+
+### `api_token`
+
+Use an API token with the Read metrics (`metrics.read`) scope. Do not place the
+raw token in the YAML. Use an environment variable such as `${DT_API_TOKEN}`.
+Raw token values in YAML are rejected.
+
+### `namespace`
+
+`namespace` is a user-provided execution scope hint.
+
+In this preview, SignalForge does not use `namespace` to filter Dynatrace API
+queries or verify service ownership. Dynatrace metrics are queried at the
+tenant service level and grouped by service entity.
+
+When `namespace` is configured, SignalForge treats the Dynatrace evidence as
+eligible for bounded enrichment with `MEDIUM` confidence, because the user has
+explicitly provided an expected workload scope. Without it, the evidence stays
+at `LOW` confidence and is treated as unscoped.
+
+Service-entity scope verification is deferred for this preview.
+
+Use `namespace` only when it meaningfully describes the workload or environment
+you are evaluating. Do not treat it as attribution or proof that a Dynatrace
+service belongs to the JTL workload.
 
 ## Behavior Rules
 
