@@ -1,8 +1,10 @@
 # SignalForge Preview
 
-Turn JTL results into a release-oriented review workflow with a compact CLI verdict, a compare-first HTML report, and endpoint-level evidence.
+A local, repeatable investigation workflow for JTL-based load test reviews.
 
-SignalForge Preview is a local, JTL-first tool for engineers who need to review a run quickly, compare it against a baseline, and understand whether the visible change is worth release attention. It is not a load generator, not an observability platform, and not a generic HTML export.
+SignalForge helps Performance Engineers turn raw JMeter/JTL evidence into a structured first read: verdict, risks, endpoint evidence, compare findings, and optional bounded Dynatrace context.
+
+It is not a load generator, not an observability platform, and not a generic HTML export — and it is not trying to replace the Performance Engineer, JMeter, Dynatrace, or an LLM. The goal is to produce a consistent technical artifact that can be reviewed, challenged, shared, or discussed further.
 
 ## Local CLI, Fast First Read
 
@@ -31,6 +33,16 @@ In compare mode, `Signal: Regression observed` does not automatically mean the o
 ## Compare-First Review
 
 ![SignalForge compare report](./media/screenshots/compare-hero.png)
+
+## How This Fits With LLMs
+
+LLMs are useful for exploration, explanation, and turning technical findings into summaries.
+
+SignalForge focuses on the step before that: producing a repeatable, local, inspectable investigation artifact from the same performance evidence.
+
+In practice, SignalForge can generate the structured first read, and a Performance Engineer can then use their own judgment — or even an LLM — to discuss, summarize, or communicate the findings.
+
+Same input. Same rules. Same report structure. That consistency matters when the output needs to be reviewed, compared, or defended.
 
 ## Why SignalForge Preview
 
