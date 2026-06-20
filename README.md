@@ -16,6 +16,12 @@ It is not a load generator, not an observability platform, and not a generic HTM
 - **Optional Dynatrace Evidence Relationships:** review bounded corroboration for the same execution window when enrichment is configured.
 - **Baseline comparison when available:** add regression context when a relevant baseline exists; compare is supporting evidence, not the product category.
 
+## Executive View and Next Investigation Step
+
+![SignalForge single-run report](./media/screenshots/single-run.png)
+
+The Executive view is an executive-oriented first read for Performance Engineers and review stakeholders. It keeps the top-line verdict, release posture, test posture, confidence, and next action visible. It is a structured starting point to review and refine, not an automated executive report or a replacement for engineering judgment.
+
 ## Local CLI, Fast First Read
 
 ```text
@@ -30,12 +36,6 @@ That combination matters:
 - a baseline can add regression context when one is available
 
 The single-run path stands on its own. Compare adds context; it is not required to produce the first read.
-
-## Executive View and Next Investigation Step
-
-![SignalForge single-run report](./media/screenshots/single-run.png)
-
-The Executive view is an executive-oriented first read for Performance Engineers and review stakeholders. It keeps the top-line verdict, release posture, test posture, confidence, and next action visible. It is a structured starting point to review and refine, not an automated executive report or a replacement for engineering judgment.
 
 ## Investigation Guidance, Not Root-Cause Claims
 
