@@ -1,38 +1,41 @@
 # SignalForge Preview
 
-A local, repeatable investigation workflow for JTL-based load test reviews.
+A structured, defensible first performance review from raw JMeter/JTL evidence.
 
-SignalForge helps Performance Engineers turn raw JMeter/JTL evidence into a structured first read: verdict, risks, endpoint evidence, compare findings, and optional bounded Dynatrace context.
+The core workflow is local and JTL-first. SignalForge helps Performance Engineers review test confidence, observed patterns, endpoint findings, and what to investigate next — without pretending to be a root-cause tool.
 
 It is not a load generator, not an observability platform, and not a generic HTML export — and it is not trying to replace the Performance Engineer, JMeter, Dynatrace, or an LLM. The goal is to produce a consistent technical artifact that can be reviewed, challenged, shared, or discussed further.
+
+## What SignalForge Helps You Review
+
+- **Executive-oriented first read:** scan verdict, release posture, test posture, and next action without starting from raw tables.
+- **Test confidence and weak-evidence signals:** see when duration, sample volume, pressure, or other validity limits weaken the conclusions a run can support.
+- **Observed performance patterns:** distinguish visible evidence from stronger causal claims.
+- **Endpoint-level findings:** inspect which transactions deserve attention and why.
+- **What to investigate next:** use bounded advisory guidance as a starting point for PE review, not as confirmed root cause.
+- **Optional Dynatrace Evidence Relationships:** review bounded corroboration for the same execution window when enrichment is configured.
+- **Baseline comparison when available:** add regression context when a relevant baseline exists; compare is supporting evidence, not the product category.
 
 ## Local CLI, Fast First Read
 
 ```text
+signalforge run examples/quickstart/sample.jtl
 signalforge compare examples/quickstart/sample.jtl examples/quickstart/baseline.jtl
-
-=== SignalForge Product Verdict ===
-GO - Ready
-Release: Proceed
-
-=== SignalForge Compare Summary ===
-Overall Compare Posture: Comparable
-Comparison Context: Medium
-Signal: Regression observed
-Context: Current-run thresholds may pass while compare still shows degradation against the baseline.
 ```
 
 That combination matters:
 
 - the CLI gives you a fast release-oriented read
 - the HTML report gives you the evidence behind it
-- the compare workflow makes regressions easier to review than a raw JTL diff
+- a baseline can add regression context when one is available
 
-In compare mode, `Signal: Regression observed` does not automatically mean the overall release posture flipped to `FAIL`. It means the run changed in a way that deserves review, even when the broader compare posture still reads as `Comparable`.
+The single-run path stands on its own. Compare adds context; it is not required to produce the first read.
 
-## Compare-First Review
+## Executive View and Next Investigation Step
 
-![SignalForge compare report](./media/screenshots/compare-hero.png)
+![SignalForge single-run report](./media/screenshots/single-run.png)
+
+The Executive view is an executive-oriented first read for Performance Engineers and review stakeholders. It keeps the top-line verdict, release posture, test posture, confidence, and next action visible. It is a structured starting point to review and refine, not an automated executive report or a replacement for engineering judgment.
 
 ## How This Fits With LLMs
 
@@ -46,9 +49,13 @@ Same input. Same rules. Same report structure. That consistency matters when the
 
 ## Why SignalForge Preview
 
-- Compare comes first. The strongest workflow is not just "render one report," but "show me what changed and whether it matters."
-- The output is release-oriented. The report is built to help engineers, QA leads, and technical managers scan risk quickly.
-- Endpoint evidence stays visible. You can move from executive summary to endpoint-level changes without leaving the report.
+- The structured first read comes first. SignalForge starts with what the run can support, what was observed, and what deserves review next.
+- Test confidence stays visible. Weak evidence is surfaced instead of being silently treated as a strong conclusion.
+- The output is release-oriented. Engineers, QA leads, and technical managers can scan risk without beginning from raw metric tables.
+- Endpoint evidence stays visible. You can move from the Executive view to transaction-level findings without leaving the report.
+- Advisory guidance stays bounded. It suggests an investigation direction without claiming root cause.
+- Dynatrace is optional supporting evidence. Experimental Evidence Relationships can add corroboration context without changing verdict, advisory, or compare behavior.
+- Compare is available when a relevant baseline exists. It adds regression context without defining the product category.
 - The workflow stays local. JTL in, CLI plus HTML out, no hosted platform required for the basic preview path.
 - Healthy runs still read cleanly. The tool is not only for red failure cases or catastrophic demos.
 
@@ -84,28 +91,31 @@ More detail:
 - [Quickstart walkthrough](./docs/quickstart.md)
 - [Azure DevOps notes](./docs/azure-devops.md)
 
-## Single-Run Executive View
-
-![SignalForge single-run report](./media/screenshots/single-run.png)
-
-Single-run still matters. A calm healthy run should be readable without noise, and a reviewer should be able to find the top-line verdict, release posture, and next action in a few seconds.
-
-## Why Compare Matters
-
-A single run can tell you whether a result looks healthy or risky. Compare tells you whether a new run changed in a way that deserves attention.
-
-SignalForge Preview is strongest when you want to:
-
-- review a candidate run against a baseline
-- see whether the release posture actually shifted
-- identify which endpoints changed the most
-- keep the summary readable for both hands-on engineers and review stakeholders
-
-## Endpoint-Level Evidence
+## Endpoint-Level Findings
 
 ![SignalForge endpoint comparison](./media/screenshots/endpoint-evidence.png)
 
-The compare surface is not only a headline. It also gives you endpoint-level evidence so you can inspect changed transactions, search quickly, and sort the drilldown by the dimension that matters most.
+Endpoint evidence helps identify which transactions deserve attention. When compare context is available, the same surface also helps inspect changed transactions, search quickly, and sort the drilldown by the dimension that matters most.
+
+## Optional Dynatrace Evidence Relationships
+
+Dynatrace enrichment is an optional, experimental, advanced preview path. It is YAML-only, uses token references through environment variables, and is limited to three bounded service-signal families.
+
+It does not change Product Verdict, Release, Advisory, Compare, JSON, or CI exit-code behavior. JTL analysis works fully without Dynatrace.
+
+When actionable Dynatrace data is available for the same execution window, the Insights tab can show Agreement, Partial Agreement, No Corroboration, or Insufficient Evidence for the supported signal families. These are bounded evidence relationships, not causality, service attribution, or root-cause claims.
+
+![SignalForge Evidence Relationships](./media/screenshots/evidence-relationships.png)
+
+See [Experimental Dynatrace](./docs/experimental-dynatrace.md).
+
+## Baseline Comparison When Available
+
+When a relevant baseline is available, SignalForge can compare the current run against it to add regression context to the investigation.
+
+![SignalForge compare report](./media/screenshots/compare-hero.png)
+
+Compare can help review whether the release posture shifted and which endpoints changed most. `Signal: Regression observed` does not automatically mean the overall release posture flipped to `FAIL`; it means the run changed in a way that deserves review, even when the broader compare posture remains `Comparable`.
 
 ## Thresholds & Evaluation Context
 
@@ -154,8 +164,10 @@ This preview is intentionally focused:
 - local-first workflow
 - CLI plus HTML review flow
 - single-run interpretation
-- compare-oriented regression review
+- test-confidence and endpoint-level review
+- bounded advisory / next-investigation guidance
 - optional experimental Dynatrace enrichment for advanced users
+- baseline comparison when available
 
 This preview is intentionally not:
 
@@ -205,27 +217,18 @@ Useful feedback for this preview includes:
 
 - install friction
 - time to first useful insight
-- compare usefulness
+- whether the first read makes test confidence and observed findings clear
+- whether the next investigation step is useful or noisy
+- whether endpoint evidence is sufficient
+- compare usefulness when a relevant baseline exists
 - confusing wording
 - trust concerns
 
 See [Feedback](./docs/feedback.md).
 
-## Experimental Dynatrace
-
-Dynatrace enrichment is included as an optional advanced preview path. It is YAML-only, uses token references through environment variables, and is limited to three bounded service-signal families.
-
-It does not change Product Verdict, Release, Advisory, Compare, JSON, or CI exit-code behavior. JTL analysis works fully without Dynatrace.
-
-When Dynatrace enrichment returns data for the same execution window, the Insights tab adds an experimental Evidence Relationships section. It shows, per signal family, whether a JTL observation was independently corroborated by Dynatrace — without claiming causality.
-
-![SignalForge Evidence Relationships](./media/screenshots/evidence-relationships.png)
-
-See [Experimental Dynatrace](./docs/experimental-dynatrace.md).
-
 ## Preview Notice
 
-SignalForge Preview is meant to be practical, not theatrical. The goal is to make JTL review and compare easier to understand, easier to discuss, and easier to act on without pretending to replace engineering judgment.
+SignalForge Preview is meant to be practical, not theatrical. The goal is to make JTL evidence easier to review, easier to discuss, and easier to act on without pretending to replace engineering judgment.
 
 ## Preview Direction
 
