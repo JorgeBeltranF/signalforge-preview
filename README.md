@@ -37,6 +37,16 @@ The single-run path stands on its own. Compare adds context; it is not required 
 
 The Executive view is an executive-oriented first read for Performance Engineers and review stakeholders. It keeps the top-line verdict, release posture, test posture, confidence, and next action visible. It is a structured starting point to review and refine, not an automated executive report or a replacement for engineering judgment.
 
+## Investigation Guidance, Not Root-Cause Claims
+
+SignalForge helps organize the first investigation by separating what was observed, how strong the available evidence is, which endpoints deserve attention, and what may need review next.
+
+The Advisory and Next Steps views provide bounded follow-up guidance. They are starting points for Performance Engineer review—not confirmed causes, automated RCA, or instructions about what to fix.
+
+![SignalForge investigation guidance](./media/screenshots/investigation-guidance.png)
+
+**Investigation guidance example:** Observed patterns, evidence limits, and suggested follow-up areas help move from raw JTL metrics toward a defensible first investigation without claiming root cause.
+
 ## How This Fits With LLMs
 
 LLMs are useful for exploration, explanation, and turning technical findings into summaries.
