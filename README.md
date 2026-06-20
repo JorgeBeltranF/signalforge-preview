@@ -6,6 +6,14 @@ The core workflow is local and JTL-first. SignalForge helps Performance Engineer
 
 It is not a load generator, not an observability platform, and not a generic HTML export — and it is not trying to replace the Performance Engineer, JMeter, Dynatrace, or an LLM. The goal is to produce a consistent technical artifact that can be reviewed, challenged, shared, or discussed further.
 
+## Before and After
+
+**Without SignalForge:** the reviewer manually connects JTL statistics, endpoint behavior, errors, test validity, and available monitoring context before forming an initial view.
+
+**With SignalForge:** the JTL is organized into a structured first read: verdict, confidence, observed patterns, endpoint findings, and bounded next-step guidance.
+
+SignalForge does not claim root cause. It helps the reviewer understand what the evidence supports, what looks risky, and what may need review next.
+
 ## What SignalForge Helps You Review
 
 - **Executive-oriented first read:** scan verdict, release posture, test posture, and next action without starting from raw tables.
