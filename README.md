@@ -6,6 +6,18 @@ The core workflow is local and JTL-first. SignalForge helps Performance Engineer
 
 It is not a load generator, not an observability platform, and not a generic HTML export — and it is not trying to replace the Performance Engineer, JMeter, Dynatrace, or an LLM. The goal is to produce a consistent technical artifact that can be reviewed, challenged, shared, or discussed further.
 
+## View a Generated Sample Report
+
+Want to understand SignalForge without installing anything?
+
+Open a generated sample report:
+
+[View sample degraded-run report](docs/sample-report.html)
+
+This sample is synthetic and intended for report-format evaluation. It shows how SignalForge organizes JMeter/JTL evidence into a structured first read: verdict, confidence, release posture, observed patterns, endpoint findings, and bounded next-step guidance.
+
+It is not production evidence, not a benchmark claim, and not a root-cause analysis.
+
 ## Before and After
 
 **Without SignalForge:** the reviewer manually connects JTL statistics, endpoint behavior, errors, test validity, and available monitoring context before forming an initial view.
