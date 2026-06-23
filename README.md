@@ -12,7 +12,9 @@ Want to understand SignalForge without installing anything?
 
 Open a generated sample report:
 
-[View sample degraded-run report](docs/sample-report.html)
+[View sample degraded-run report](https://jorgebeltranf.github.io/signalforge-preview/sample-report.html)
+
+This opens in the browser through GitHub Pages. No installation or download is required.
 
 This sample is synthetic and intended for report-format evaluation. It shows how SignalForge organizes JMeter/JTL evidence into a structured first read: verdict, confidence, release posture, observed patterns, endpoint findings, and bounded next-step guidance.
 
