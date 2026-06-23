@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SignalForge Report — Run quickstart-sample</title>
+<title>SignalForge Report â€” Run wi046-synthetic-degraded</title>
 <link rel="icon" href="data:,">
 <script>
 /*!
@@ -80,7 +80,7 @@ body {
   outline-offset: 4px;
 }
 
-/* Executive — confidence strip */
+/* Executive â€” confidence strip */
 .exec-conf-strip {
   display: flex; align-items: center; flex-wrap: wrap; gap: 4px;
   padding: 8px 14px; margin-bottom: 16px;
@@ -88,7 +88,7 @@ body {
   font-size: 11px; font-family: var(--mono);
 }
 
-/* Executive — key takeaway cards */
+/* Executive â€” key takeaway cards */
 .exec-kt-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -106,7 +106,7 @@ body {
   font-size: 12px; font-family: var(--mono); color: var(--text); line-height: 1.5;
 }
 
-/* Executive — next best action compact card */
+/* Executive â€” next best action compact card */
 .exec-nba-card {
   background: var(--surface); border: 1px solid var(--border);
   border-radius: 8px; padding: 14px 18px; margin-bottom: 24px;
@@ -122,7 +122,7 @@ body {
   text-transform: uppercase; letter-spacing: .06em; margin-bottom: 2px;
 }
 
-/* Executive — depth links */
+/* Executive â€” depth links */
 .exec-depth-links {
   display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
   margin: 28px 0 8px;
@@ -220,7 +220,7 @@ body {
 }
 .exec-context-details summary::-webkit-details-marker { display: none; }
 .exec-context-details summary::before {
-  content: '▶';
+  content: 'â–¶';
   display: inline-block;
   margin-right: 8px;
   font-size: 10px;
@@ -399,7 +399,7 @@ body {
   font-size: 12px; font-family: var(--mono); color: var(--text2);
   padding: 4px 0; line-height: 1.6;
 }
-.findings-list li::before { content: '→ '; color: var(--info); }
+.findings-list li::before { content: 'â†’ '; color: var(--info); }
 
 /* Narrative */
 .narrative-box {
@@ -746,7 +746,7 @@ tbody tr:hover { background: rgba(88,166,255,.04); }
 }
 
 .apdex-details summary::before {
-  content: '▶';
+  content: 'â–¶';
   font-size: 10px;
   margin-right: 6px;
   color: var(--info);
@@ -798,7 +798,7 @@ tbody tr:hover { background: rgba(88,166,255,.04); }
   list-style: none; display: flex; align-items: center; gap: 8px;
 }
 .howto-section summary::-webkit-details-marker { display: none; }
-.howto-section summary::before { content: '▶'; font-size: 10px; color: var(--info); transition: transform .15s; }
+.howto-section summary::before { content: 'â–¶'; font-size: 10px; color: var(--info); transition: transform .15s; }
 .howto-section[open] summary::before { transform: rotate(90deg); }
 .howto-section .content {
   margin-top: 16px;
@@ -819,38 +819,38 @@ tbody tr:hover { background: rgba(88,166,255,.04); }
 
   <div class="report-header">
     <div>
-      <h1>SignalForge Report — Run quickstart-sample</h1>
+      <h1>SignalForge Report â€” Run wi046-synthetic-degraded</h1>
       <div style="font-size:11px;color:var(--text2);font-family:var(--mono);margin-top:4px">
-        Script: signalforge_quickstart.jmx · Workload: business-paced.yml · System: perf
+        Script: signalforge_wi046_sample.jmx Â· Workload: business-paced Â· System: preview
       </div>
     </div>
     <div class="meta">
       Start: 2023-11-14 16:13:20 CST<br>
-      End: 2023-11-14 16:28:19 CST<br>
+      End: 2023-11-14 16:28:21 CST<br>
       Duration: 15.0 min<br>
-      Generated: 2026-06-23 18:18:40 CDT
+      Generated: 2026-06-23 18:57:24 CDT
     </div>
   </div>
 
-  
+
   <div class="tab-bar">
-    <button class="tab-btn active" data-tab="tab-exec">📋 Executive</button>
-    <button class="tab-btn" data-tab="tab-insights">💡 Insights &amp; Next Steps</button>
-    <button class="tab-btn" data-tab="tab-dev">🔧 Technical Analysis</button>
-    
-    
+    <button class="tab-btn active" data-tab="tab-exec">ðŸ“‹ Executive</button>
+    <button class="tab-btn" data-tab="tab-insights">ðŸ’¡ Insights &amp; Next Steps</button>
+    <button class="tab-btn" data-tab="tab-dev">ðŸ”§ Technical Analysis</button>
+
+
   </div>
 
-  
+
   <div id="tab-exec" class="tab-panel active">
 
-    
+
 <div class="product-verdict-shell">
   <div class="product-verdict-title">Product Verdict</div>
   <div style="margin-bottom:10px">
     <span class="product-verdict-pill product-verdict-fail" style="font-size:14px;padding:5px 12px">FAIL - Issue Observed</span>
   </div>
-  <div class="product-verdict-keytext" style="margin-bottom:12px">Thresholds were breached with strong evidence.</div>
+  <div class="product-verdict-keytext" style="margin-bottom:12px">Load context was not fully reconstructed; the issue signal remains visible.</div>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px">
     <div style="padding:12px 14px;border-radius:8px;border:1px solid rgba(48,54,61,.4);background:rgba(255,255,255,.02)">
       <div style="font-size:10px;color:var(--text2);font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;font-weight:700">System</div>
@@ -864,45 +864,45 @@ tbody tr:hover { background: rgba(88,166,255,.04); }
     </div>
     <div style="padding:12px 14px;border-radius:8px;border:1px solid rgba(48,54,61,.4);background:rgba(255,255,255,.02)">
       <div style="font-size:10px;color:var(--text2);font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;font-weight:700">Test</div>
-      <div class="product-verdict-keytext" style="margin-bottom:4px">HIGH</div>
-      <div class="product-verdict-text">Low aggregate pressure limits scaling conclusions.</div>
-      
-      
+      <div class="product-verdict-keytext" style="margin-bottom:4px">UNKNOWN</div>
+      <div class="product-verdict-text">Applied load could not be reconstructed.</div>
+
+
     </div>
     <div style="padding:12px 14px;border-radius:8px;border:1px solid rgba(48,54,61,.4);background:rgba(255,255,255,.02)">
       <div style="font-size:10px;color:var(--text2);font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;font-weight:700">Action</div>
-      <div class="product-verdict-keytext" style="margin-bottom:4px">Investigate the bottleneck before release</div>
-      
+      <div class="product-verdict-keytext" style="margin-bottom:4px">Investigate observed failure evidence before release</div>
+      <div class="product-verdict-text">Reconstruct applied load context in parallel to refine confidence.</div>
     </div>
   </div>
-  
+
   <details style="margin-top:12px">
-    <summary style="font-size:11px;color:var(--text2);font-family:var(--mono);cursor:pointer;user-select:none;list-style:none;outline:none;opacity:.92;transition:opacity .16s ease">Evidence behind this verdict ▾</summary>
+    <summary style="font-size:11px;color:var(--text2);font-family:var(--mono);cursor:pointer;user-select:none;list-style:none;outline:none;opacity:.92;transition:opacity .16s ease">Evidence behind this verdict â–¾</summary>
     <div style="margin-top:8px;padding:10px 12px;background:rgba(255,255,255,.03);border:1px solid rgba(48,54,61,.35);border-radius:8px">
-      <div class="product-verdict-text" style="margin-bottom:4px"><strong>Load pattern:</strong> Low aggregate pressure</div>
+      <div class="product-verdict-text" style="margin-bottom:4px"><strong>Load pattern:</strong> Applied load could not be reconstructed</div>
       <div class="product-verdict-text" style="margin-bottom:4px"><strong>System signal:</strong> Load relationship inconclusive</div>
       <div class="product-verdict-text" style="margin-bottom:4px"><strong>Capacity interpretation:</strong> Capacity interpretation unavailable</div>
       <div class="product-verdict-text" style="margin-bottom:4px"><strong>Confounders:</strong> Unknown</div>
       <div class="product-verdict-text" style="margin-bottom:4px"><strong>Attribution context:</strong> Medium</div>
       <div class="product-verdict-text" style="margin-bottom:4px"><strong>Load context:</strong> Medium</div>
       <div class="product-verdict-text"><strong>Decision rule:</strong> Decision rule applied</div>
-      
-      
-      
+
+
+
     </div>
   </details>
-  <div style="font-size:11px;color:var(--text2);font-family:var(--mono);line-height:1.5">Confidence: Test MEDIUM | System MEDIUM</div>
+  <div style="font-size:11px;color:var(--text2);font-family:var(--mono);line-height:1.5">Confidence: Test LOW | System MEDIUM</div>
   <div style="font-size:11px;color:var(--text2);font-family:var(--mono);line-height:1.5;margin-top:4px">Workload: unknown (default)</div>
 </div>
 
 
-    
 
-    
+
+
     <details class="exec-context-details">
       <summary>Thresholds &amp; Evaluation Context</summary>
       <div class="threshold-context-body">
-        
+
 <div class="threshold-context-section" id="anchor-preview-defaults">
   <div class="threshold-context-subtitle">Mixed Evaluation Context</div>
   <div class="threshold-preview-note">This report used a mix of custom inputs and preview defaults. Interpret the results against both the supplied thresholds and the generic fallback assumptions.</div>
@@ -914,14 +914,14 @@ tbody tr:hover { background: rgba(88,166,255,.04); }
       <col class="threshold-col-source">
     </colgroup>
     <tbody>
-      <tr><td class="threshold-label threshold-cell-metric">APDEX T</td><td class="threshold-value threshold-cell-threshold" colspan="2">1,000 ms</td><td class="threshold-source threshold-cell-source">custom</td></tr><tr><td class="threshold-label threshold-cell-metric">Latency threshold</td><td class="threshold-value threshold-cell-threshold" colspan="2">P95 ≤ 5.00s</td><td class="threshold-source threshold-cell-source">preview default</td></tr><tr><td class="threshold-label threshold-cell-metric">Error threshold</td><td class="threshold-value threshold-cell-threshold" colspan="2">Error rate ≤ 2.0%</td><td class="threshold-source threshold-cell-source">preview default</td></tr><tr><td class="threshold-label threshold-cell-metric">Representative duration minimum</td><td class="threshold-value threshold-cell-threshold" colspan="2">10 min</td><td class="threshold-source threshold-cell-source">preview default</td></tr><tr><td class="threshold-label threshold-cell-metric">Samples per endpoint minimum</td><td class="threshold-value threshold-cell-threshold" colspan="2">200</td><td class="threshold-source threshold-cell-source">preview default</td></tr><tr><td class="threshold-label threshold-cell-metric">Normalization samples floor</td><td class="threshold-value threshold-cell-threshold" colspan="2">500</td><td class="threshold-source threshold-cell-source">preview default</td></tr>
+      <tr><td class="threshold-label threshold-cell-metric">APDEX T</td><td class="threshold-value threshold-cell-threshold" colspan="2">1,000 ms</td><td class="threshold-source threshold-cell-source">custom</td></tr><tr><td class="threshold-label threshold-cell-metric">Latency threshold</td><td class="threshold-value threshold-cell-threshold" colspan="2">P95 â‰¤ 5.00s</td><td class="threshold-source threshold-cell-source">preview default</td></tr><tr><td class="threshold-label threshold-cell-metric">Error threshold</td><td class="threshold-value threshold-cell-threshold" colspan="2">Error rate â‰¤ 2.0%</td><td class="threshold-source threshold-cell-source">preview default</td></tr><tr><td class="threshold-label threshold-cell-metric">Representative duration minimum</td><td class="threshold-value threshold-cell-threshold" colspan="2">10 min</td><td class="threshold-source threshold-cell-source">preview default</td></tr><tr><td class="threshold-label threshold-cell-metric">Samples per endpoint minimum</td><td class="threshold-value threshold-cell-threshold" colspan="2">200</td><td class="threshold-source threshold-cell-source">preview default</td></tr><tr><td class="threshold-label threshold-cell-metric">Normalization samples floor</td><td class="threshold-value threshold-cell-threshold" colspan="2">500</td><td class="threshold-source threshold-cell-source">preview default</td></tr>
     </tbody>
   </table>
   <div class="threshold-preview-footnote">Confidence and release wording depend partly on representativeness, duration, and sample sufficiency &#8212; not only on latency and error outcomes.</div>
 </div>
 
-        
-        
+
+
 <details id="anchor-threshold-governance" class="threshold-context-section" style="margin-top:12px">
   <summary style="cursor:pointer;list-style:none;display:flex;align-items:center;gap:6px;padding:4px 0;
                   font-size:12px;font-weight:600;color:var(--text1);font-family:var(--mono);user-select:none;">
@@ -947,7 +947,7 @@ tbody tr:hover { background: rgba(88,166,255,.04); }
         </tr>
       </thead>
       <tbody>
-        <tr><td class="threshold-label threshold-cell-metric" title="&lt; 10 min is insufficient to observe warm-up effects, GC pressure, or latency drift">Representative Duration Min</td><td class="threshold-value threshold-num threshold-cell-threshold">10</td><td class="threshold-value threshold-num threshold-cell-observed">&mdash;</td><td class="threshold-source threshold-cell-source">Policy</td></tr><tr><td class="threshold-label threshold-cell-metric" title="At &lt; 200 samples an endpoint&#x27;s P95 has high variance and cannot be reliably compared against SLA thresholds">Samples / Endpoint Min</td><td class="threshold-value threshold-num threshold-cell-threshold">200</td><td class="threshold-value threshold-num threshold-cell-observed">&mdash;</td><td class="threshold-source threshold-cell-source">Policy</td></tr><tr><td class="threshold-label threshold-cell-metric" title="Below 500 total samples the aggregate percentiles carry low statistical weight">Normalization Samples Floor</td><td class="threshold-value threshold-num threshold-cell-threshold">500</td><td class="threshold-value threshold-num threshold-cell-observed">&mdash;</td><td class="threshold-source threshold-cell-source">Policy</td></tr><tr><td class="threshold-label threshold-cell-metric" title="Total elapsed test duration from JTL timestamps">Observed Duration</td><td class="threshold-value threshold-num threshold-cell-threshold">&mdash;</td><td class="threshold-value threshold-warning threshold-num threshold-cell-observed">14.98</td><td class="threshold-source threshold-cell-source">Observed</td></tr><tr><td class="threshold-label threshold-cell-metric" title="Total JTL row count for this run">Observed Total Samples</td><td class="threshold-value threshold-num threshold-cell-threshold">&mdash;</td><td class="threshold-value threshold-warning threshold-num threshold-cell-observed">1800</td><td class="threshold-source threshold-cell-source">Observed</td></tr>
+        <tr><td class="threshold-label threshold-cell-metric" title="&lt; 10 min is insufficient to observe warm-up effects, GC pressure, or latency drift">Representative Duration Min</td><td class="threshold-value threshold-num threshold-cell-threshold">10</td><td class="threshold-value threshold-num threshold-cell-observed">&mdash;</td><td class="threshold-source threshold-cell-source">Policy</td></tr><tr><td class="threshold-label threshold-cell-metric" title="At &lt; 200 samples an endpoint&#x27;s P95 has high variance and cannot be reliably compared against SLA thresholds">Samples / Endpoint Min</td><td class="threshold-value threshold-num threshold-cell-threshold">200</td><td class="threshold-value threshold-num threshold-cell-observed">&mdash;</td><td class="threshold-source threshold-cell-source">Policy</td></tr><tr><td class="threshold-label threshold-cell-metric" title="Below 500 total samples the aggregate percentiles carry low statistical weight">Normalization Samples Floor</td><td class="threshold-value threshold-num threshold-cell-threshold">500</td><td class="threshold-value threshold-num threshold-cell-observed">&mdash;</td><td class="threshold-source threshold-cell-source">Policy</td></tr><tr><td class="threshold-label threshold-cell-metric" title="Total elapsed test duration from JTL timestamps">Observed Duration</td><td class="threshold-value threshold-num threshold-cell-threshold">&mdash;</td><td class="threshold-value threshold-ok threshold-num threshold-cell-observed">15.03</td><td class="threshold-source threshold-cell-source">Observed</td></tr><tr><td class="threshold-label threshold-cell-metric" title="Total JTL row count for this run">Observed Total Samples</td><td class="threshold-value threshold-num threshold-cell-threshold">&mdash;</td><td class="threshold-value threshold-ok threshold-num threshold-cell-observed">18000</td><td class="threshold-source threshold-cell-source">Observed</td></tr>
       </tbody>
     </table>
     <div style="margin-top:8px;font-size:11px;color:var(--text2);font-family:var(--mono);line-height:1.6">
@@ -965,73 +965,42 @@ tbody tr:hover { background: rgba(88,166,255,.04); }
 
   </div>
 
-  
+
   <div id="tab-insights" class="tab-panel">
 
-    <div class="section-title">💡 Key Takeaway</div><div class="exec-kt-card" style="border-left-color:var(--info);background:rgba(88,166,255,.08)"><div class="exec-kt-text">Backend request failures are the primary technical degradation signal in this run.</div></div>
+    <div class="section-title">Key Takeaway</div><div class="exec-kt-card" style="border-left-color:var(--info);background:rgba(88,166,255,.08)"><div class="exec-kt-text">Backend request failures are the primary technical degradation signal in this run.</div></div>
 
-    <div class="section-title">⚠️ Top Risks</div><div style="font-size:10px;font-family:var(--mono);color:var(--text2);margin-bottom:6px">Primary evidence behind this review focus</div><div class="table-wrap" style="margin-bottom:4px"><table style="width:100%"><thead><tr><th style="padding:6px 10px;font-size:10px;font-family:var(--mono);color:var(--text2);background:var(--surface2);border-bottom:1px solid var(--border);text-align:left;text-transform:uppercase;letter-spacing:.06em">Endpoint</th><th style="padding:6px 10px;font-size:10px;font-family:var(--mono);color:var(--text2);background:var(--surface2);border-bottom:1px solid var(--border);text-align:left;text-transform:uppercase;letter-spacing:.06em">P95</th><th style="padding:6px 10px;font-size:10px;font-family:var(--mono);color:var(--text2);background:var(--surface2);border-bottom:1px solid var(--border);text-align:left;text-transform:uppercase;letter-spacing:.06em">Error %</th></tr></thead><tbody><tr><td style="padding:6px 10px;font-family:var(--mono);font-size:11px">🔴 Checkout</td><td style="padding:6px 10px;font-family:var(--mono);font-size:11px;color:var(--warn);font-weight:600">1.90s</td><td style="padding:6px 10px;font-family:var(--mono);font-size:11px;color:var(--bad);font-weight:600">1.62%</td></tr></tbody></table></div>
+    <div class="section-title">Top Risks</div><div style="font-size:10px;font-family:var(--mono);color:var(--text2);margin-bottom:6px">Primary evidence behind this review focus</div><div class="table-wrap" style="margin-bottom:4px"><table style="width:100%"><thead><tr><th style="padding:6px 10px;font-size:10px;font-family:var(--mono);color:var(--text2);background:var(--surface2);border-bottom:1px solid var(--border);text-align:left;text-transform:uppercase;letter-spacing:.06em">Endpoint</th><th style="padding:6px 10px;font-size:10px;font-family:var(--mono);color:var(--text2);background:var(--surface2);border-bottom:1px solid var(--border);text-align:left;text-transform:uppercase;letter-spacing:.06em">P95</th><th style="padding:6px 10px;font-size:10px;font-family:var(--mono);color:var(--text2);background:var(--surface2);border-bottom:1px solid var(--border);text-align:left;text-transform:uppercase;letter-spacing:.06em">Error %</th></tr></thead><tbody><tr><td style="padding:6px 10px;font-family:var(--mono);font-size:11px">ðŸ”´ Checkout</td><td style="padding:6px 10px;font-family:var(--mono);font-size:11px;color:var(--bad);font-weight:600">2.79s</td><td style="padding:6px 10px;font-family:var(--mono);font-size:11px;color:var(--bad);font-weight:600">3.02%</td></tr></tbody></table></div>
 
-    
 
-    
-    
-  <details id="anchor-expert-insight" style="background:var(--surface2,rgba(22,27,34,.65));border-radius:8px;
-              padding:0;margin-bottom:20px;border:1px solid rgba(48,54,61,.4)">
-    <summary style="padding:16px 18px;cursor:pointer;user-select:none;list-style:none;outline:none;
-                    font-size:12px;color:var(--text1);font-family:var(--mono);font-weight:700;
-                    letter-spacing:.02em">▶ Expert Insight Context <span style="font-size:10px;color:var(--text2);font-weight:600">click to expand</span></summary>
-    <div style="padding:0 22px 18px 22px">
+  <div id="anchor-investigation-hypothesis" class="section-title">Investigation Hypothesis</div>
+  <div style="background:var(--surface2,rgba(22,27,34,.65));border-radius:8px;
+              padding:18px 22px;margin-bottom:20px;border:1px solid rgba(48,54,61,.4)">
+    <div id="insights-operational-summary" style="padding:12px 14px;border-radius:8px;border:1px solid rgba(88,166,255,.25);background:rgba(255,255,255,.02)"><div style="font-size:10px;color:var(--text2);font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;font-weight:700">Current Read</div><div style="font-size:12px;color:var(--text1);font-family:var(--mono);line-height:1.6">Observed degradation and confounders are both material; targeted validation is needed before assigning causal priority.</div><div style="height:1px;background:rgba(48,54,61,.4);margin:14px 0"></div><div style="font-size:10px;color:var(--text2);font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;font-weight:700">Next Check</div><ol id="insights-next-action" style="margin:6px 0 0 18px;padding:0"><li style="font-size:12px;color:var(--text1);font-family:var(--mono);line-height:1.6;margin-bottom:6px">Isolate the time windows where failures burst first.</li><li style="font-size:12px;color:var(--text1);font-family:var(--mono);line-height:1.6;margin-bottom:6px">Correlate those bursts with backend events, exceptions, restarts, or dependency failures.</li><li style="font-size:12px;color:var(--text1);font-family:var(--mono);line-height:1.6;margin-bottom:6px">Then check whether the same windows also show meaningful latency overlap.</li></ol><div style="height:1px;background:rgba(48,54,61,.4);margin:14px 0"></div><div style="font-size:10px;color:var(--text2);font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;font-weight:700">Fastest Validation Step</div><div style="font-size:12px;color:var(--text1);font-family:var(--mono);line-height:1.6">Isolate the strongest failure burst and correlate it with backend exceptions or dependency failures.</div></div>
 
-      <div>
-        <div style="font-size:10px;color:var(--text2);font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase;margin-bottom:5px;font-weight:600">Scenario Assessment</div>
-        <div style="font-size:12px;color:var(--text1);font-family:var(--mono);line-height:1.65">Observed execution broadly matches the intended load scenario.</div>
-      </div>
+    <details style="margin-top:16px;border:1px solid rgba(48,54,61,.35);border-radius:8px;background:rgba(255,255,255,.01)">
+      <summary style="padding:12px 14px;cursor:pointer;user-select:none;list-style:none;outline:none;font-size:12px;color:var(--text1);font-family:var(--mono);font-weight:700">Explain Analysis</summary>
+      <div style="padding:0 14px 14px 14px">
+        <div style="font-size:10px;color:var(--text2);font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;font-weight:600">Primary Hypothesis</div>
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:8px">
+          <div style="font-size:14px;color:var(--text1);font-family:var(--mono);font-weight:700">Failure path instability</div>
+          <span style="display:inline-block;padding:2px 9px;border-radius:999px;font-size:10px;font-weight:700;font-family:var(--mono);letter-spacing:.04em;background:rgba(249,115,22,.12);color:#f97316;border:1px solid #f9731644">HIGH SUPPORT</span>
+        </div>
 
-      <div style="height:1px;background:rgba(48,54,61,.4);margin:14px 0"></div>
+        <div style="font-size:10px;color:var(--text2);font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase;margin-top:14px;margin-bottom:4px;font-weight:600">Start Here</div>
+        <ul style="margin:6px 0 0 18px;padding:0"><li style="font-size:12px;color:var(--text1);font-family:var(--mono);line-height:1.6;margin-bottom:6px">Inspect failing response codes and failure clustering by time window</li><li style="font-size:12px;color:var(--text1);font-family:var(--mono);line-height:1.6;margin-bottom:6px">Correlate failures with server exceptions, dependency failures, and restarts if telemetry is available</li></ul>
 
-      <div>
-        <div style="font-size:10px;color:var(--text2);font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase;margin-bottom:5px;font-weight:600">System Read</div>
-        <div style="font-size:12px;color:var(--text1);font-family:var(--mono);line-height:1.65">The run shows performance degradation under the observed load. 1 endpoint exhibited latency beyond acceptable thresholds.</div>
-      </div>
 
-      <div style="height:1px;background:rgba(48,54,61,.4);margin:14px 0"></div>
+        <div style="height:1px;background:rgba(48,54,61,.4);margin:16px 0"></div><div style="font-size:10px;color:var(--text2);font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;font-weight:600">Causal Prioritization</div><div style="padding:12px 14px;border-radius:8px;border:1px solid rgba(48,54,61,.4);background:rgba(255,255,255,.02)"><div style="display:grid;grid-template-columns:150px 1fr;gap:10px;padding:6px 0;"><div style="font-size:10px;color:var(--text2);font-family:var(--mono);text-transform:uppercase;letter-spacing:.06em">Dominant Driver</div><div style="font-size:12px;color:var(--text1);font-family:var(--mono);line-height:1.55">Failure path instability</div></div><div style="display:grid;grid-template-columns:150px 1fr;gap:10px;padding:6px 0;border-top:1px solid rgba(48,54,61,.25);"><div style="font-size:10px;color:var(--text2);font-family:var(--mono);text-transform:uppercase;letter-spacing:.06em">Driver Strength</div><div style="font-size:12px;color:var(--text1);font-family:var(--mono);line-height:1.55">MEDIUM</div></div><div style="display:grid;grid-template-columns:150px 1fr;gap:10px;padding:6px 0;border-top:1px solid rgba(48,54,61,.25);"><div style="font-size:10px;color:var(--text2);font-family:var(--mono);text-transform:uppercase;letter-spacing:.06em">Confounder Strength</div><div style="font-size:12px;color:var(--text1);font-family:var(--mono);line-height:1.55">LOW</div></div><div style="display:grid;grid-template-columns:150px 1fr;gap:10px;padding:6px 0;border-top:1px solid rgba(48,54,61,.25);"><div style="font-size:10px;color:var(--text2);font-family:var(--mono);text-transform:uppercase;letter-spacing:.06em">Impact Override</div><div style="font-size:12px;color:var(--text1);font-family:var(--mono);line-height:1.55">No</div></div><div style="display:grid;grid-template-columns:150px 1fr;gap:10px;padding:6px 0;border-top:1px solid rgba(48,54,61,.25);"><div style="font-size:10px;color:var(--text2);font-family:var(--mono);text-transform:uppercase;letter-spacing:.06em">Arbitration Result</div><div style="font-size:12px;color:var(--text1);font-family:var(--mono);line-height:1.55">Mixed / unclear</div></div><div style="display:grid;grid-template-columns:150px 1fr;gap:10px;padding:6px 0;border-top:1px solid rgba(48,54,61,.25);"><div style="font-size:10px;color:var(--text2);font-family:var(--mono);text-transform:uppercase;letter-spacing:.06em">Pattern Coherence</div><div style="font-size:12px;color:var(--text1);font-family:var(--mono);line-height:1.55">MEDIUM</div></div><div style="display:grid;grid-template-columns:150px 1fr;gap:10px;padding:6px 0;border-top:1px solid rgba(48,54,61,.25);"><div style="font-size:10px;color:var(--text2);font-family:var(--mono);text-transform:uppercase;letter-spacing:.06em">Load Dependence</div><div style="font-size:12px;color:var(--text1);font-family:var(--mono);line-height:1.55">Unknown</div></div><div style="display:grid;grid-template-columns:150px 1fr;gap:10px;padding:6px 0;border-top:1px solid rgba(48,54,61,.25);"><div style="font-size:10px;color:var(--text2);font-family:var(--mono);text-transform:uppercase;letter-spacing:.06em">Investigation Priority</div><div style="font-size:12px;color:var(--text1);font-family:var(--mono);line-height:1.55">Failure window first</div></div><div style="display:grid;grid-template-columns:150px 1fr;gap:10px;padding:6px 0;border-top:1px solid rgba(48,54,61,.25);"><div style="font-size:10px;color:var(--text2);font-family:var(--mono);text-transform:uppercase;letter-spacing:.06em">Driver Attribution Status</div><div style="font-size:12px;color:var(--text1);font-family:var(--mono);line-height:1.55">Unclear</div></div><div style="display:grid;grid-template-columns:150px 1fr;gap:10px;padding:6px 0;border-top:1px solid rgba(48,54,61,.25);"><div style="font-size:10px;color:var(--text2);font-family:var(--mono);text-transform:uppercase;letter-spacing:.06em">Confounder Override</div><div style="font-size:12px;color:var(--text1);font-family:var(--mono);line-height:1.55">No</div></div><div style="display:grid;grid-template-columns:150px 1fr;gap:10px;padding:6px 0;border-top:1px solid rgba(48,54,61,.25);"><div style="font-size:10px;color:var(--text2);font-family:var(--mono);text-transform:uppercase;letter-spacing:.06em">Dominant Risk Statement</div><div style="font-size:12px;color:var(--text1);font-family:var(--mono);line-height:1.55">Observed degradation exists, but the evidence is mixed and requires targeted validation.</div></div><div style="display:grid;grid-template-columns:150px 1fr;gap:10px;padding:6px 0;border-top:1px solid rgba(48,54,61,.25);"><div style="font-size:10px;color:var(--text2);font-family:var(--mono);text-transform:uppercase;letter-spacing:.06em">Priority Rationale</div><div style="font-size:12px;color:var(--text1);font-family:var(--mono);line-height:1.55">Driver and confounder evidence are both material but neither clearly dominates.</div></div></div>
+        <div style="margin-top:12px;padding-top:12px;border-top:1px solid rgba(48,54,61,.35)"><div style="font-size:10px;color:var(--text2);font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px;font-weight:600">Directional Context</div><div style="font-size:12px;color:var(--text1);font-family:var(--mono);line-height:1.6">Critical failures were observed under the applied load, suggesting the system was genuinely stressed and the scenario was representative.</div></div><div style="margin-top:12px;padding-top:12px;border-top:1px solid rgba(48,54,61,.35)"><div style="font-size:10px;color:var(--text2);font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px;font-weight:600">Confidence Context</div><div style="font-size:12px;color:var(--text1);font-family:var(--mono);line-height:1.6">Confidence in the NO-GO recommendation is driven by the severity and clarity of the observed failures, not by data quality limitations.</div></div>
+        <div style="height:1px;background:rgba(48,54,61,.4);margin:16px 0"></div><div style="font-size:10px;color:var(--text2);font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px;font-weight:600">Investigation Readiness</div><div style="font-size:12px;color:var(--text1);font-family:var(--mono);line-height:1.6">Enough evidence exists to begin targeted investigation. A broad rerun is unlikely to be the most efficient next step unless the investigation changes the hypothesis.</div>
 
-      <div>
-        <div style="font-size:10px;color:var(--text2);font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase;margin-bottom:5px;font-weight:600">Risk Profile</div>
-        <div style="margin-bottom:5px"><span style="background:rgba(248,81,73,.12);color:var(--bad);border-radius:4px;padding:2px 9px;font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.04em">HIGH</span></div>
-        <div style="font-size:12px;color:var(--text1);font-family:var(--mono);line-height:1.65;color:var(--text2)">Operational risk is HIGH for release from this run because the observed failure severity is still unresolved.</div>
-      </div>
-
-      <div style="height:1px;background:rgba(48,54,61,.4);margin:14px 0"></div>
-
-      <div>
-        <div style="font-size:10px;color:var(--text2);font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase;margin-bottom:5px;font-weight:600">Investigation Options</div>
-        <ol style="margin:6px 0 0 18px;padding:0"><li style="font-size:11px;color:var(--text2);font-family:var(--mono);line-height:1.65;margin-bottom:5px">Investigate the dominant performance issue first.</li><li style="font-size:11px;color:var(--text2);font-family:var(--mono);line-height:1.65;margin-bottom:5px">Validate secondary confounders in parallel if present.</li><li style="font-size:11px;color:var(--text2);font-family:var(--mono);line-height:1.65;margin-bottom:5px">Rerun or segment only if the investigation changes the hypothesis.</li></ol>
-      </div>
-
-      <div style="height:1px;background:rgba(48,54,61,.4);margin:14px 0"></div>
-
-      <div>
-        <div style="font-size:10px;color:var(--text2);font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase;margin-bottom:5px;font-weight:600">Confidence Context</div>
-        <div style="font-size:12px;color:var(--text1);font-family:var(--mono);line-height:1.65;color:var(--text2)">Confidence in the NO-GO recommendation is driven by the severity and clarity of the observed failures, not by data quality limitations.</div>
-      </div>
-
-      <div style="height:1px;background:rgba(48,54,61,.4);margin:14px 0"></div><div><details style="margin-top:6px"><summary style="font-size:10px;color:var(--text2);font-family:var(--mono);cursor:pointer;user-select:none;list-style:none;outline:none">Reasoning trace <span style="opacity:.6">&mdash; 6 observed signals, 1 derived, 1 inferred</span></summary><div style="margin-top:5px;padding:7px 10px;background:rgba(0,0,0,.18);border-radius:4px;font-size:10px;font-family:var(--mono);line-height:1.75"><div style="margin-bottom:3px"><span style="color:var(--text2);opacity:.7">Observed:</span> <span style="color:var(--text2)">test validity signals were usable · test validity score: 90 · decision context was usable · load pressure was not low · duration was adequate · sample volume was adequate</span></div><div style="margin-bottom:3px"><span style="color:var(--text2);opacity:.7">Derived:</span> <span style="color:var(--text2)">uncertainty source: mixed</span></div><div style="margin-bottom:3px"><span style="color:var(--text2);opacity:.7">Inferred:</span> <span style="color:var(--text2)">failure evidence is clear enough to anchor the decision</span></div><div style="margin-bottom:3px"><span style="color:var(--text2);opacity:.7">Rule basis:</span> <span style="color:var(--text2)">NO-GO → confidence driven by failure severity, not data quality</span></div></div></details></div>
-
-    </div>
-  </details>
-
-    <div id="anchor-diagnostic-signals" class="section-title">🔍 Diagnostic Signals</div><div style="margin-bottom:20px"><div style="font-size:11px;color:var(--text2);font-family:var(--mono);line-height:1.7;margin-bottom:10px">What the current JTL can support now, ordered by severity and confidence.</div><div style="background:var(--surface2,rgba(22,27,34,.65));border-radius:8px;padding:14px 16px;margin-bottom:12px;border:1px solid rgba(48,54,61,.4)"><div style="display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-bottom:8px"><span style="background:rgba(210,153,34,.12);color:#d29922;border:1px solid #d2992244;border-radius:999px;padding:2px 9px;font-size:10px;font-weight:700;font-family:var(--mono);letter-spacing:.04em;text-transform:uppercase">warning</span><span style="color:var(--text2);font-size:10px;font-family:var(--mono);letter-spacing:.04em">DERIVED</span><span style="color:var(--text2);font-size:10px;font-family:var(--mono);letter-spacing:.04em">/</span><span style="color:var(--text2);font-size:10px;font-family:var(--mono);letter-spacing:.04em">errors</span></div><div style="font-size:13px;color:var(--text1);font-family:var(--mono);font-weight:700;line-height:1.45;margin-bottom:6px">HTTP / Server Error Hotspots</div><div style="font-size:12px;color:var(--text1);font-family:var(--mono);line-height:1.65">Calculated from JTL failures, 1 endpoint(s) show material HTTP/server-error rates; worst is Checkout at 1.62%.</div><div style="margin-top:8px"><div style="font-size:10px;color:var(--text2);font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px">Endpoints</div><div style="display:flex;flex-wrap:wrap;align-items:center;gap:0;margin-top:2px"><span style="display:inline-block;background:rgba(88,166,255,.12);color:var(--info,#58a6ff);border:1px solid rgba(88,166,255,.25);border-radius:12px;padding:1px 9px;font-size:10px;font-family:var(--mono);white-space:nowrap;margin:2px 3px 2px 0;max-width:200px;overflow:hidden;text-overflow:ellipsis;vertical-align:middle;" title="Checkout">Checkout</span></div></div><details style="margin-top:10px"><summary style="font-size:10px;color:var(--text2);font-family:var(--mono);cursor:pointer;user-select:none;list-style:none;outline:none">▸ Why this signal</summary><div style="margin-top:6px;padding:8px 10px;background:rgba(0,0,0,.18);border-radius:4px;font-size:10px;font-family:var(--mono);line-height:1.7;color:var(--text2)"><ul style="margin:0 0 0 16px;padding:0"><li style="margin-bottom:4px">global error_rate = 0.83%</li><li style="margin-bottom:4px">worst endpoint HTTP error_rate = 1.62%</li><li style="margin-bottom:4px">worst endpoint samples = 928</li></ul><div style="margin-top:8px;font-size:11px;color:var(--text2);font-family:var(--mono);line-height:1.6"><strong style="color:var(--text1)">Immediate action:</strong> Inspect failing response codes and confirm whether the errors cluster in a narrow time window or persist through the run.</div><div style="margin-top:6px;font-size:11px;color:var(--text2);font-family:var(--mono);line-height:1.6"><strong style="color:var(--text1)">If APM is available:</strong> Correlate the affected interval with server exceptions, dependency failures, and container restarts.</div></div></details></div></div>
-
-    
-    
-<script>window.advisoryScopes = {"advisory_primary": {"scope_type": "endpoint_list", "endpoint_labels": ["Checkout", "Search"], "scope_reason": "distributed_failures"}};</script>
+<script>window.advisoryScopes = {"advisory_primary": {"scope_type": "endpoint_list", "endpoint_labels": ["Checkout"], "scope_reason": "http_server_critical"}};</script>
 <div class="section" style="margin-top:24px;">
   <div id="anchor-advisory-mode" class="section-title" style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
-    <span>🧭 Advisory Mode</span>
+    <span>Advisory Mode</span>
     <span style="font-size:0.75rem;font-weight:400;color:#94a3b8;letter-spacing:.04em;">
-      — Next Best Test
+      â€” Next Best Test
     </span>
     <span style="display:inline-block;padding:2px 9px;border-radius:10px;font-size:0.72rem;font-weight:600;letter-spacing:.03em;background:#f1f5f9;color:#64748b;border:1px solid #64748b44;margin-left:8px;vertical-align:middle;">Context: Load Test</span>
   </div>
@@ -1043,22 +1012,47 @@ tbody tr:hover { background: rgba(88,166,255,.04); }
                 text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px;">
       Primary Recommendation
     </div>
-    <div style="background:#fff;border:2px solid #ef444433;border-left:4px solid #ef4444;border-radius:10px;padding:16px 18px;margin-bottom:10px;box-shadow:0 1px 4px rgba(0,0,0,.05);"><span style="display:inline-block;padding:2px 9px;border-radius:12px;font-size:0.72rem;font-weight:600;letter-spacing:.03em;background:#fef2f2;color:#ef4444;border:1px solid #ef444433;">Failure Reproduction</span><div style="font-size:1.0rem;font-weight:700;color:#1e293b;margin:6px 0 10px;">Failure Reproduction & Investigation</div><p style="margin:0 0 10px;font-size:0.84rem;color:#475569;line-height:1.5;">No endpoints produced critical performance breaches individually; issues are distributed across endpoints without a single dominant failure point, or the failure rate is below the critical threshold at the endpoint level. Investigate error distribution before increasing load.</p><div style="margin:0 0 10px;"><span style="display:inline-block;padding:3px 10px;border-radius:999px;font-size:0.75rem;font-weight:600;letter-spacing:.03em;background:rgba(210,153,34,.08);color:var(--warn);border:1px solid rgba(210,153,34,.22);font-family:var(--mono);">Confidence: MEDIUM</span></div><p style="margin:0 0 8px;font-size:0.82rem;color:#64748b;"><strong style="color:#1e293b;">Goal:</strong> Reproduce the failure pattern in a controlled, lower-concurrency environment with APM, logging, and thread dumps active to isolate the most likely failure mechanism and gather evidence before proceeding with heavier load testing.</p><details style="margin-bottom:8px;"><summary style="font-size:0.78rem;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:.06em;cursor:pointer;user-select:none;">Suggested Parameters</summary><div style="margin-top:6px;"><table style="border-collapse:collapse;margin-top:4px;width:100%;"><tr><td style="padding:4px 10px 4px 0;color:#64748b;font-size:0.82rem;white-space:nowrap;vertical-align:top;">Target Endpoints</td><td style="padding:4px 0;font-size:0.82rem;vertical-align:top;"><div style="display:flex;flex-wrap:wrap;align-items:center;gap:0;margin-top:2px"><span style="display:inline-block;background:rgba(88,166,255,.12);color:var(--info,#58a6ff);border:1px solid rgba(88,166,255,.25);border-radius:12px;padding:1px 9px;font-size:10px;font-family:var(--mono);white-space:nowrap;margin:2px 3px 2px 0;max-width:200px;overflow:hidden;text-overflow:ellipsis;vertical-align:middle;" title="all endpoints — no single dominant failure point">all endpoints — no single dominant failu…</span></div></td></tr><tr><td style="padding:5px 10px 4px 0;color:#64748b;font-size:0.82rem;white-space:nowrap;vertical-align:top;">Concurrency</td><td style="padding:5px 0 4px;font-size:0.82rem;color:#1e293b;vertical-align:top;"><span style="font-weight:500;">2–4</span><span style="display:inline-block;padding:1px 6px;border-radius:8px;font-size:0.68rem;font-weight:600;background:#f0f9ff;color:#0ea5e9;border:1px solid #0ea5e944;margin-left:5px;vertical-align:middle;">observed</span><div style="font-size:0.74rem;color:#94a3b8;font-style:italic;margin-top:2px;line-height:1.4;">Single-engine run. Observed peak = 20 threads (max_threads in timeline). 10–20% = 2–4 threads. Low enough to limit blast radius during failure-mechanism investigation while still triggering the failure.</div></td></tr><tr><td style="padding:3px 10px 3px 0;color:#64748b;font-size:0.82rem;white-space:nowrap;vertical-align:top;">Apm Required</td><td style="padding:3px 0;font-size:0.82rem;color:#1e293b;">True</td></tr><tr><td style="padding:3px 10px 3px 0;color:#64748b;font-size:0.82rem;white-space:nowrap;vertical-align:top;">Log Level</td><td style="padding:3px 0;font-size:0.82rem;color:#1e293b;">DEBUG during reproduction window</td></tr><tr><td style="padding:3px 10px 3px 0;color:#64748b;font-size:0.82rem;white-space:nowrap;vertical-align:top;">Note</td><td style="padding:3px 0;font-size:0.82rem;color:#1e293b;">Do not increase load until the failure mechanism is better understood and the next step is clear.</td></tr></table></div></details><div style="margin-top:6px;"><a href="#" onclick="navigateToAdvisoryScope('advisory_primary');return false;" style="font-size:0.79rem;color:#58a6ff;text-decoration:none;font-family:var(--mono);border-bottom:1px solid #58a6ff44;">→ View all 2 affected endpoints</a></div><div style="margin-bottom:6px;"><div style="font-size:0.78rem;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:.06em;margin-bottom:2px;">Success Criteria</div><ul style="margin:4px 0 0 1.1rem;padding:0;"><li style="margin:2px 0;font-size:0.83rem;color:#334155;">Most likely failure mechanism isolated and documented with supporting evidence</li><li style="margin:2px 0;font-size:0.83rem;color:#334155;">A targeted fix or validation path is defined before the next load run</li><li style="margin:2px 0;font-size:0.83rem;color:#334155;">Error rate < 1% at reproduction concurrency after fix</li></ul></div><details style="margin-top:6px"><summary style="font-size:10px;color:var(--text2);font-family:var(--mono);cursor:pointer;user-select:none;list-style:none;outline:none">Why this recommendation <span style="opacity:.6">&mdash; 2 observed, 1 derived, 1 inferred</span></summary><div style="margin-top:5px;padding:7px 10px;background:rgba(0,0,0,.18);border-radius:4px;font-size:10px;font-family:var(--mono);line-height:1.75"><div style="margin-bottom:3px"><span style="color:var(--text2);opacity:.7">Observed:</span> <span style="color:var(--text2)">crit count: 0 · final decision: NO-GO</span></div><div style="margin-bottom:3px"><span style="color:var(--text2);opacity:.7">Derived:</span> <span style="color:var(--text2)">performance status: DEGRADED</span></div><div style="margin-bottom:3px"><span style="color:var(--text2);opacity:.7">Inferred:</span> <span style="color:var(--text2)">Distributed failures → no single endpoint dominant</span></div><div style="margin-bottom:3px"><span style="color:var(--text2);opacity:.7">Rule basis:</span> <span style="color:var(--text2)">crit_count &gt; 0 → failure_reproduction (distributed; no single endpoint dominant)</span></div></div></details></div>
-    
+    <div style="background:#fff;border:2px solid #ef444433;border-left:4px solid #ef4444;border-radius:10px;padding:16px 18px;margin-bottom:10px;box-shadow:0 1px 4px rgba(0,0,0,.05);"><span style="display:inline-block;padding:2px 9px;border-radius:12px;font-size:0.72rem;font-weight:600;letter-spacing:.03em;background:#fef2f2;color:#ef4444;border:1px solid #ef444433;">Failure Reproduction</span><div style="font-size:1.0rem;font-weight:700;color:#1e293b;margin:6px 0 10px;">Failure Reproduction & Investigation</div><p style="margin:0 0 10px;font-size:0.84rem;color:#475569;line-height:1.5;">HTTP/server failures were observed in 1 endpoint(s) (Checkout) during this run. Increasing load before understanding the failure mechanism risks masking the underlying issue or destabilising the environment. Reproducible failures must be investigated first.</p><div style="margin:0 0 10px;"><span style="display:inline-block;padding:3px 10px;border-radius:999px;font-size:0.75rem;font-weight:600;letter-spacing:.03em;background:rgba(210,153,34,.08);color:var(--warn);border:1px solid rgba(210,153,34,.22);font-family:var(--mono);">Confidence: MEDIUM</span></div><p style="margin:0 0 8px;font-size:0.82rem;color:#64748b;"><strong style="color:#1e293b;">Goal:</strong> Reproduce the failure pattern in a controlled, lower-concurrency environment with APM, logging, and thread dumps active to isolate the observed failure mechanism and gather evidence before proceeding with heavier load testing.</p><details style="margin-bottom:8px;"><summary style="font-size:0.78rem;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:.06em;cursor:pointer;user-select:none;">Suggested Parameters</summary><div style="margin-top:6px;"><table style="border-collapse:collapse;margin-top:4px;width:100%;"><tr><td style="padding:4px 10px 4px 0;color:#64748b;font-size:0.82rem;white-space:nowrap;vertical-align:top;">Target Endpoints</td><td style="padding:4px 0;font-size:0.82rem;vertical-align:top;"><div style="display:flex;flex-wrap:wrap;align-items:center;gap:0;margin-top:2px"><span style="display:inline-block;background:rgba(88,166,255,.12);color:var(--info,#58a6ff);border:1px solid rgba(88,166,255,.25);border-radius:12px;padding:1px 9px;font-size:10px;font-family:var(--mono);white-space:nowrap;margin:2px 3px 2px 0;max-width:200px;overflow:hidden;text-overflow:ellipsis;vertical-align:middle;" title="Checkout">Checkout</span></div></td></tr><tr><td style="padding:5px 10px 4px 0;color:#64748b;font-size:0.82rem;white-space:nowrap;vertical-align:top;">Concurrency</td><td style="padding:5px 0 4px;font-size:0.82rem;color:#1e293b;vertical-align:top;"><span style="font-weight:500;">8â€“16</span><span style="display:inline-block;padding:1px 6px;border-radius:8px;font-size:0.68rem;font-weight:600;background:#f0f9ff;color:#0ea5e9;border:1px solid #0ea5e944;margin-left:5px;vertical-align:middle;">observed</span><div style="font-size:0.74rem;color:#94a3b8;font-style:italic;margin-top:2px;line-height:1.4;">Single-engine run. Observed peak = 80 threads (max_threads in timeline). 10â€“20% = 8â€“16 threads. Low enough to limit blast radius during failure-mechanism investigation while still triggering the failure.</div></td></tr><tr><td style="padding:3px 10px 3px 0;color:#64748b;font-size:0.82rem;white-space:nowrap;vertical-align:top;">Apm Required</td><td style="padding:3px 0;font-size:0.82rem;color:#1e293b;">True</td></tr><tr><td style="padding:3px 10px 3px 0;color:#64748b;font-size:0.82rem;white-space:nowrap;vertical-align:top;">Log Level</td><td style="padding:3px 0;font-size:0.82rem;color:#1e293b;">DEBUG during reproduction window</td></tr><tr><td style="padding:3px 10px 3px 0;color:#64748b;font-size:0.82rem;white-space:nowrap;vertical-align:top;">Note</td><td style="padding:3px 0;font-size:0.82rem;color:#1e293b;">Do not increase load until the failure mechanism is better understood and the next step is clear.</td></tr></table></div></details><div style="margin-bottom:6px;"><div style="font-size:0.78rem;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:.06em;margin-bottom:2px;">Success Criteria</div><ul style="margin:4px 0 0 1.1rem;padding:0;"><li style="margin:2px 0;font-size:0.83rem;color:#334155;">Observed failure mechanism isolated and documented with supporting evidence</li><li style="margin:2px 0;font-size:0.83rem;color:#334155;">A targeted fix or validation path is defined before the next load run</li><li style="margin:2px 0;font-size:0.83rem;color:#334155;">Error rate < 1% at reproduction concurrency after fix</li></ul></div><details style="margin-top:6px"><summary style="font-size:10px;color:var(--text2);font-family:var(--mono);cursor:pointer;user-select:none;list-style:none;outline:none">Why this recommendation <span style="opacity:.6">&mdash; 3 observed, 1 derived, 1 inferred</span></summary><div style="margin-top:5px;padding:7px 10px;background:rgba(0,0,0,.18);border-radius:4px;font-size:10px;font-family:var(--mono);line-height:1.75"><div style="margin-bottom:3px"><span style="color:var(--text2);opacity:.7">Observed:</span> <span style="color:var(--text2)">critical HTTP count: 1 Â· http critical endpoints: [&#x27;Checkout&#x27;] Â· final decision: NO-GO</span></div><div style="margin-bottom:3px"><span style="color:var(--text2);opacity:.7">Derived:</span> <span style="color:var(--text2)">performance status: FAIL</span></div><div style="margin-bottom:3px"><span style="color:var(--text2);opacity:.7">Inferred:</span> <span style="color:var(--text2)">Named HTTP/server endpoint(s) crossed CRITICAL threshold</span></div><div style="margin-bottom:3px"><span style="color:var(--text2);opacity:.7">Rule basis:</span> <span style="color:var(--text2)">critical HTTP count: 1 â†’ failure reproduction as primary (HTTP/server criticals drive selection)</span></div></div></details></div>
+
   </div>
 </div>
 
+      </div>
+    </details>
+
+    <details style="margin-top:16px;border:1px solid rgba(48,54,61,.35);border-radius:8px;background:rgba(255,255,255,.01)">
+      <summary style="padding:12px 14px;cursor:pointer;user-select:none;list-style:none;outline:none;font-size:12px;color:var(--text1);font-family:var(--mono);font-weight:700">Explain Evidence</summary>
+      <div style="padding:0 14px 14px 14px">
+        <div style="font-size:10px;color:var(--text2);font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px;font-weight:600">Why</div>
+        <ul style="margin:6px 0 0 18px;padding:0"><li style="margin-bottom:8px"><div style="font-size:12px;color:var(--text1);font-family:var(--mono);line-height:1.55">HTTP or server-side failures are a material part of the observed pattern.</div><div style="font-size:10px;color:var(--text2);font-family:var(--mono);margin-top:2px">source: http_error_signal</div></li><li style="margin-bottom:8px"><div style="font-size:12px;color:var(--text1);font-family:var(--mono);line-height:1.55">The run-level severity is driven primarily by failures rather than pure latency drift.</div><div style="font-size:10px;color:var(--text2);font-family:var(--mono);margin-top:2px">source: run_summary_signal</div></li></ul>
+
+
+        <div style="height:1px;background:rgba(48,54,61,.4);margin:16px 0"></div><div style="font-size:10px;color:var(--text2);font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px;font-weight:600">Lower Priority for This Run</div><ul style="margin:6px 0 0 18px;padding:0"><li style="font-size:12px;color:var(--text1);font-family:var(--mono);line-height:1.6;margin-bottom:6px">Broad rerun before checking the dominant observed degradation path</li></ul>
+        <div id="anchor-diagnostic-signals" class="section-title">Diagnostic Signals</div><div style="margin-bottom:20px"><div style="font-size:11px;color:var(--text2);font-family:var(--mono);line-height:1.7;margin-bottom:10px">What the current JTL can support now, ordered by severity and confidence.</div><div style="background:var(--surface2,rgba(22,27,34,.65));border-radius:8px;padding:14px 16px;margin-bottom:12px;border:1px solid rgba(48,54,61,.4)"><div style="display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-bottom:8px"><span style="background:rgba(248,81,73,.12);color:#f85149;border:1px solid #f8514944;border-radius:999px;padding:2px 9px;font-size:10px;font-weight:700;font-family:var(--mono);letter-spacing:.04em;text-transform:uppercase">critical</span><span style="color:var(--text2);font-size:10px;font-family:var(--mono);letter-spacing:.04em">DERIVED</span><span style="color:var(--text2);font-size:10px;font-family:var(--mono);letter-spacing:.04em">/</span><span style="color:var(--text2);font-size:10px;font-family:var(--mono);letter-spacing:.04em">errors</span></div><div style="font-size:13px;color:var(--text1);font-family:var(--mono);font-weight:700;line-height:1.45;margin-bottom:6px">HTTP / Server Error Hotspots</div><div style="font-size:12px;color:var(--text1);font-family:var(--mono);line-height:1.65">Calculated from JTL failures, 1 endpoint(s) show material HTTP/server-error rates; worst is Checkout at 3.02%.</div><div style="margin-top:8px"><div style="font-size:10px;color:var(--text2);font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px">Endpoints</div><div style="display:flex;flex-wrap:wrap;align-items:center;gap:0;margin-top:2px"><span style="display:inline-block;background:rgba(88,166,255,.12);color:var(--info,#58a6ff);border:1px solid rgba(88,166,255,.25);border-radius:12px;padding:1px 9px;font-size:10px;font-family:var(--mono);white-space:nowrap;margin:2px 3px 2px 0;max-width:200px;overflow:hidden;text-overflow:ellipsis;vertical-align:middle;" title="Checkout">Checkout</span></div></div><details style="margin-top:10px"><summary style="font-size:10px;color:var(--text2);font-family:var(--mono);cursor:pointer;user-select:none;list-style:none;outline:none">â–¸ Why this signal</summary><div style="margin-top:6px;padding:8px 10px;background:rgba(0,0,0,.18);border-radius:4px;font-size:10px;font-family:var(--mono);line-height:1.7;color:var(--text2)"><ul style="margin:0 0 0 16px;padding:0"><li style="margin-bottom:4px">global error_rate = 1.06%</li><li style="margin-bottom:4px">worst endpoint HTTP error_rate = 3.02%</li><li style="margin-bottom:4px">worst endpoint samples = 6296</li></ul><div style="margin-top:8px;font-size:11px;color:var(--text2);font-family:var(--mono);line-height:1.6"><strong style="color:var(--text1)">Immediate action:</strong> Inspect failing response codes and confirm whether the errors cluster in a narrow time window or persist through the run.</div><div style="margin-top:6px;font-size:11px;color:var(--text2);font-family:var(--mono);line-height:1.6"><strong style="color:var(--text1)">If APM is available:</strong> Correlate the affected interval with server exceptions, dependency failures, and container restarts.</div></div></details></div></div>
+      </div>
+    </details>
+  </div>
+
+
+
+
+
+
+
+
+
+
 
   </div>
 
-  
+
   <div id="tab-dev" class="tab-panel">
 
-    
-    
 
-    
-    
+
+
+
+
   <div id="anchor-investigate-first" class="section-title">Investigate First</div>
   <div style="font-size:10px;font-family:var(--mono);color:var(--text2);margin-bottom:6px">
     Start here for immediate investigation
@@ -1072,22 +1066,22 @@ tbody tr:hover { background: rgba(88,166,255,.04); }
         <th>Endpoint</th><th>Severity</th><th>Problem Type</th>
         <th>P95</th><th>APDEX</th><th>Error %</th><th>CV</th><th>Confidence</th>
       </tr></thead>
-      <tbody><tr><td class="ep-name" title="Checkout">Checkout</td><td style="color:var(--bad);font-size:11px;font-weight:600">🔴 Critical</td><td style="font-size:11px;color:var(--text2)">Failure</td><td class="cell-warn">1.90s</td><td style="color:#f97316;font-family:var(--mono)">0.596</td><td class="cell-bad">1.62%</td><td class="mono">0.26</td><td style="color:var(--good);font-size:11px;font-weight:600">High</td></tr><tr><td class="ep-name" title="Search">Search</td><td style="color:var(--good);font-size:11px;font-weight:600">🟢 Acceptable</td><td style="font-size:11px;color:var(--text2)">OK</td><td class="cell-good">413ms</td><td style="color:#00c896;font-family:var(--mono)">1.000</td><td class="cell-good">0.00%</td><td class="mono">0.09</td><td style="color:var(--good);font-size:11px;font-weight:600">High</td></tr></tbody>
+      <tbody><tr><td class="ep-name" title="Checkout">Checkout</td><td style="color:var(--bad);font-size:11px;font-weight:600">ðŸ”´ Critical</td><td style="font-size:11px;color:var(--text2)">Failure</td><td class="cell-warn">2.79s</td><td style="color:#f97316;font-family:var(--mono)">0.500</td><td class="cell-bad">3.02%</td><td class="mono">0.23</td><td style="color:var(--good);font-size:11px;font-weight:600">High</td></tr><tr><td class="ep-name" title="Login">Login</td><td style="color:var(--good);font-size:11px;font-weight:600">ðŸŸ¢ Acceptable</td><td style="font-size:11px;color:var(--text2)">OK</td><td class="cell-good">562ms</td><td style="color:#00c896;font-family:var(--mono)">1.000</td><td class="cell-good">0.00%</td><td class="mono">0.11</td><td style="color:var(--good);font-size:11px;font-weight:600">High</td></tr><tr><td class="ep-name" title="Search">Search</td><td style="color:var(--good);font-size:11px;font-weight:600">ðŸŸ¢ Acceptable</td><td style="font-size:11px;color:var(--text2)">OK</td><td class="cell-good">380ms</td><td style="color:#00c896;font-family:var(--mono)">1.000</td><td class="cell-good">0.00%</td><td class="mono">0.10</td><td style="color:var(--good);font-size:11px;font-weight:600">High</td></tr><tr><td class="ep-name" title="ProductDetails">ProductDetails</td><td style="color:var(--good);font-size:11px;font-weight:600">ðŸŸ¢ Acceptable</td><td style="font-size:11px;color:var(--text2)">OK</td><td class="cell-good">484ms</td><td style="color:#00c896;font-family:var(--mono)">1.000</td><td class="cell-good">0.00%</td><td class="mono">0.10</td><td style="color:var(--good);font-size:11px;font-weight:600">High</td></tr></tbody>
     </table>
   </div>
-  
 
-    
-    <div class="section-title">&#9888; Data Reliability Signals</div><div style="background:rgba(210,153,34,.06);border:1px solid rgba(210,153,34,.25);border-radius:8px;padding:14px 20px;margin-bottom:24px"><div style="font-size:11px;font-family:var(--mono);color:var(--text2);padding:4px 0;line-height:1.6">&#8226; Endpoints with few samples should be treated as directional only, not conclusive.</div></div>
 
-    
-    
 
-    
+    <div class="section-title">Data Reliability Signals</div><div style="background:rgba(210,153,34,.06);border:1px solid rgba(210,153,34,.25);border-radius:8px;padding:14px 20px;margin-bottom:24px"><div style="font-size:11px;font-family:var(--mono);color:var(--text2);padding:4px 0;line-height:1.6">&#8226; Endpoints with few samples should be treated as directional only, not conclusive.</div></div>
+
+
+
+
+
     <div style="font-size:10px;font-family:var(--mono);color:var(--text2);margin:-6px 0 6px">
       Secondary evidence ranked by impact
     </div>
-    
+
   <div id="anchor-highest-impact" style="font-size:12px;font-weight:700;color:var(--text);margin:18px 0 8px;font-family:var(--mono)">
     Highest Impact Transactions
   </div>
@@ -1100,20 +1094,20 @@ tbody tr:hover { background: rgba(88,166,255,.04); }
         <th>Transaction</th><th>Driver</th><th>Samples</th><th>P95</th>
         <th>Error %</th><th>APDEX</th><th>SLA</th><th>Impact</th><th>Verdict</th>
       </tr></thead>
-      <tbody><tr><td class="ep-name" title="Checkout">Checkout</td><td style="font-size:11px;color:var(--text2)">📎 Server Error</td><td class="mono">928</td><td>1.90s</td><td>1.62%</td><td class="mono">0.596</td><td>✅</td><td class="mono">2.10</td><td style="color:var(--bad);font-size:11px;font-weight:600">🔴 CRITICAL — 📎 Server Error</td></tr><tr><td class="ep-name" title="Search">Search</td><td style="font-size:11px;color:var(--text2)">Threshold</td><td class="mono">872</td><td>413ms</td><td>0.00%</td><td class="mono">1.000</td><td>✅</td><td class="mono">1.75</td><td style="color:var(--good);font-size:11px;font-weight:600">🟢 PASS</td></tr></tbody>
+      <tbody><tr><td class="ep-name" title="Checkout">Checkout</td><td style="font-size:11px;color:var(--text2)">âš ï¸ Server Error</td><td class="mono">6,296</td><td>2.79s</td><td>3.02%</td><td class="mono">0.500</td><td>âŒ</td><td class="mono">2.10</td><td style="color:var(--bad);font-size:11px;font-weight:600">ðŸ”´ CRITICAL â€” âš ï¸ Server Error</td></tr><tr><td class="ep-name" title="Login">Login</td><td style="font-size:11px;color:var(--text2)">Threshold</td><td class="mono">2,744</td><td>562ms</td><td>0.00%</td><td class="mono">1.000</td><td>âœ…</td><td class="mono">2.05</td><td style="color:var(--good);font-size:11px;font-weight:600">ðŸŸ¢ PASS</td></tr><tr><td class="ep-name" title="Search">Search</td><td style="font-size:11px;color:var(--text2)">Threshold</td><td class="mono">4,484</td><td>380ms</td><td>0.00%</td><td class="mono">1.000</td><td>âœ…</td><td class="mono">1.75</td><td style="color:var(--good);font-size:11px;font-weight:600">ðŸŸ¢ PASS</td></tr><tr><td class="ep-name" title="ProductDetails">ProductDetails</td><td style="font-size:11px;color:var(--text2)">Threshold</td><td class="mono">4,476</td><td>484ms</td><td>0.00%</td><td class="mono">1.000</td><td>âœ…</td><td class="mono">1.30</td><td style="color:var(--good);font-size:11px;font-weight:600">ðŸŸ¢ PASS</td></tr></tbody>
     </table>
   </div>
-  
 
-    
+
+
   <div class="section-title">Error Breakdown (top 20)</div>
-  
+
   <div class="table-wrap">
     <table><thead><tr><th>Transaction [Code]</th><th>Count</th><th>% of Total</th>
-    </tr></thead><tbody><tr><td>Checkout [500]</td><td class="cell-bad">15</td><td>0.833%</td></tr></tbody></table>
+    </tr></thead><tbody><tr><td>Checkout [500]</td><td class="cell-bad">190</td><td>1.056%</td></tr></tbody></table>
   </div>
 
-    
+
     <details class="howto-section" id="all-transactions-panel" style="margin-top:8px;margin-bottom:24px">
       <summary>All Transactions</summary>
       <div class="content">
@@ -1121,10 +1115,10 @@ tbody tr:hover { background: rgba(88,166,255,.04); }
         <div style="font-size:10px;font-family:var(--mono);color:var(--text2);margin:0 0 6px">
           Top transaction inventory &mdash; prioritized reference view
         </div>
-        
-  <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:0 0 10px;font-size:11px;font-family:var(--mono);color:var(--text2)"><span>Showing all 2 transactions.</span><a href="sample-report__all_transactions.csv" download style="color:var(--info);text-decoration:none;font-weight:600">Download full table (CSV)</a></div>
+
+  <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:0 0 10px;font-size:11px;font-family:var(--mono);color:var(--text2)"><span>Showing all 4 transactions.</span><a href="sample-report__all_transactions.csv" download style="color:var(--info);text-decoration:none;font-weight:600">Download full table (CSV)</a></div>
   <div style="font-size:10px;font-family:var(--mono);color:var(--text2);margin:-4px 0 10px">Search filters the visible transactions only.</div>
-  
+
   <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:12px">
     <input id="endpointSearch" type="text" placeholder="Search visible transactions..."
            style="background:var(--surface);border:1px solid var(--border);color:var(--text);
@@ -1161,13 +1155,13 @@ tbody tr:hover { background: rgba(88,166,255,.04); }
         <th>Avg</th><th>P50</th><th>P90</th><th>P95 &#9660;</th><th>P99</th>
         <th>Error %</th><th>TPS</th><th>CV</th><th>HTTP Codes</th>
       </tr></thead>
-      <tbody><tr data-severity="degraded" data-problem="server-error-low" data-error="1.6163793103448276" data-cv="0.259" data-label="Checkout"><td class="ep-name" title="Checkout">Checkout</td><td>928</td><td style="color:#f97316;font-weight:600;font-family:var(--mono)">0.596</td><td>1.27s</td><td>1.22s</td><td>1.71s</td><td class="cell-warn">1.90s</td><td>2.28s</td><td class="cell-bad">1.62%</td><td>1.03/s</td><td class="mono">0.26</td><td class="codes">200: 913, 500: 15</td></tr><tr data-severity="acceptable" data-problem="ok" data-error="0.0" data-cv="0.094" data-label="Search"><td class="ep-name" title="Search">Search</td><td>872</td><td style="color:#00c896;font-weight:600;font-family:var(--mono)">1.000</td><td>361ms</td><td>362ms</td><td>404ms</td><td class="cell-good">413ms</td><td>441ms</td><td class="cell-good">0.00%</td><td>0.97/s</td><td class="mono">0.09</td><td class="codes">200: 872</td></tr></tbody>
+      <tbody><tr data-severity="critical" data-problem="server-error-warn" data-error="3.0177890724269374" data-cv="0.229" data-label="Checkout"><td class="ep-name" title="Checkout">Checkout</td><td>6,296</td><td style="color:#f97316;font-weight:600;font-family:var(--mono)">0.500</td><td>1.82s</td><td>1.70s</td><td>2.61s</td><td class="cell-warn">2.79s</td><td>3.02s</td><td class="cell-bad">3.02%</td><td>6.98/s</td><td class="mono">0.23</td><td class="codes">200: 6106, 500: 190</td></tr><tr data-severity="acceptable" data-problem="ok" data-error="0.0" data-cv="0.109" data-label="Login"><td class="ep-name" title="Login">Login</td><td>2,744</td><td style="color:#00c896;font-weight:600;font-family:var(--mono)">1.000</td><td>480ms</td><td>479ms</td><td>553ms</td><td class="cell-good">562ms</td><td>569ms</td><td class="cell-good">0.00%</td><td>3.04/s</td><td class="mono">0.11</td><td class="codes">200: 2744</td></tr><tr data-severity="acceptable" data-problem="ok" data-error="0.0" data-cv="0.097" data-label="Search"><td class="ep-name" title="Search">Search</td><td>4,484</td><td style="color:#00c896;font-weight:600;font-family:var(--mono)">1.000</td><td>329ms</td><td>329ms</td><td>374ms</td><td class="cell-good">380ms</td><td>384ms</td><td class="cell-good">0.00%</td><td>4.97/s</td><td class="mono">0.10</td><td class="codes">200: 4484</td></tr><tr data-severity="acceptable" data-problem="ok" data-error="0.0" data-cv="0.096" data-label="ProductDetails"><td class="ep-name" title="ProductDetails">ProductDetails</td><td>4,476</td><td style="color:#00c896;font-weight:600;font-family:var(--mono)">1.000</td><td>420ms</td><td>421ms</td><td>476ms</td><td class="cell-good">484ms</td><td>489ms</td><td class="cell-good">0.00%</td><td>4.97/s</td><td class="mono">0.10</td><td class="codes">200: 4476</td></tr></tbody>
     </table>
   </div>
       </div>
     </details>
 
-    
+
     <details class="howto-section" id="supporting-views" style="margin-top:8px;margin-bottom:32px">
       <summary>Supporting Views</summary>
       <div class="content">
@@ -1178,7 +1172,7 @@ tbody tr:hover { background: rgba(88,166,255,.04); }
         <div style="font-size:10px;font-family:var(--mono);color:var(--text2);text-transform:uppercase;letter-spacing:.08em;margin:4px 0 10px">
           Load Shape
         </div>
-        
+
       <div class="section-title">Throughput Over Time</div>
       <div class="infra-chart-hint">Shows the load shape of the run. TPS is primary; thread context is shown when available.</div>
       <div class="chart-card">
@@ -1190,38 +1184,38 @@ tbody tr:hover { background: rgba(88,166,255,.04); }
       <div class="infra-chart-hint">Share of traffic that failed in each interval. Triangle markers indicate spike intervals (shown when &gt;10% of intervals have failures).</div>
       <div class="chart-card"><canvas id="infraErrRateChart" height="180"></canvas></div>
       <div class="infra-chart-interp">Interpretation: Errors were distributed across the run rather than isolated to one moment.</div>
-      <div class="infra-chart-interp" style="border-left:none;font-size:10px;opacity:0.65;margin-top:4px">Peak bucket volume: 65 requests &nbsp;&middot;&nbsp; Intervals with failures: 12 / 30</div>
+      <div class="infra-chart-interp" style="border-left:none;font-size:10px;opacity:0.65;margin-top:4px">Peak bucket volume: 601 requests &nbsp;&middot;&nbsp; Intervals with failures: 30 / 30</div>
       <div class="section-title">Latency vs Throughput</div>
       <div class="infra-chart-hint">Scatter of avg response time vs req/s per interval. Green = clean buckets, red triangles = buckets with failures.</div>
       <div class="chart-card"><canvas id="infraLvTChart" height="220"></canvas></div>
-      <div class="infra-chart-interp" style="border-left-color:var(--info);margin-top:4px"><strong style="color:var(--info)">No load-latency correlation — likely structural bottleneck</strong><span style="color:var(--text2)"> — TPS–latency correlation = 0.15 — latency unrelated to load volume.</span></div>
-    
+
+
 
         <div style="font-size:10px;font-family:var(--mono);color:var(--text2);text-transform:uppercase;letter-spacing:.08em;margin:18px 0 10px">
           Response Distribution
         </div>
-        
+
   <div class="section-title">Response Time Variability</div>
-  <div class="narrative-box" style="margin-bottom:12px">All 2 endpoints show acceptable response time stability.</div>
+  <div class="narrative-box" style="margin-bottom:12px">All 4 endpoints show acceptable response time stability.</div>
   <div style="font-size:11px;color:var(--text2);font-family:var(--mono);margin-top:8px;line-height:1.6">CV = StdDev / Mean. High values indicate inconsistent response times.</div>
-  
-        
-  <div class="section-title">Response Time Percentiles — Global</div>
+
+
+  <div class="section-title">Response Time Percentiles â€” Global</div>
   <div class="table-wrap">
     <table><thead><tr>
       <th>Metric</th><th>Value</th>
     </tr></thead><tbody>
-      <tr><td>Average</td><td>832ms</td></tr>
-      <tr><td>Min</td><td>271ms</td></tr>
-      <tr><td>P50 (Median)</td><td>775ms</td></tr>
-      <tr><td>P90</td><td>1.51s</td></tr>
-      <tr><td>P95</td><td class="cell-warn">1.73s</td></tr>
-      <tr><td>P99</td><td>2.13s</td></tr>
-      <tr><td>Max</td><td>2.77s</td></tr>
-      <tr><td>Std Dev</td><td>514ms</td></tr>
+      <tr><td>Average</td><td>898ms</td></tr>
+      <tr><td>Min</td><td>275ms</td></tr>
+      <tr><td>P50 (Median)</td><td>459ms</td></tr>
+      <tr><td>P90</td><td>1.84s</td></tr>
+      <tr><td>P95</td><td class="cell-warn">2.44s</td></tr>
+      <tr><td>P99</td><td>2.88s</td></tr>
+      <tr><td>Max</td><td>3.16s</td></tr>
+      <tr><td>Std Dev</td><td>725ms</td></tr>
     </tbody></table>
   </div>
-        
+
       <details style="margin-bottom:24px">
         <summary style="cursor:pointer;font-size:12px;font-family:var(--mono);color:var(--text2);padding:6px 0">
           &#9656; Response Time Breakdown
@@ -1229,14 +1223,14 @@ tbody tr:hover { background: rgba(88,166,255,.04); }
         <div style="padding-top:10px">
           <div class="infra-chart-hint">Compares total response time against connection/setup timing when available.</div>
           <div class="chart-card"><canvas id="infraRtChart" height="220"></canvas></div>
-          <div class="infra-chart-interp">Interpretation: Connection time remained low relative to total response time; slowdown likely occurred after connection setup.</div>
+          <div class="infra-chart-interp">Interpretation: Connection time remained low relative to total response time; slowdown was observed after connection setup.</div>
         </div>
       </details>
 
         <div style="font-size:10px;font-family:var(--mono);color:var(--text2);text-transform:uppercase;letter-spacing:.08em;margin:18px 0 10px">
           Deep Reference
         </div>
-        
+
       <details style="margin-bottom:24px">
         <summary style="cursor:pointer;font-size:12px;font-family:var(--mono);color:var(--text2);padding:6px 0">
           &#9656; Full Performance &amp; Error Timelines
@@ -1261,10 +1255,10 @@ tbody tr:hover { background: rgba(88,166,255,.04); }
 
   </div>
 
-  
 
-  
-  
+
+
+
 
 </div>
 
@@ -1322,7 +1316,7 @@ function navigateTo(tabId, anchorId) {
       datasets: [
         {
           label: 'TPS (req/s)',
-          data: [2.0, 1.97, 1.97, 2.0, 1.93, 2.0, 2.0, 2.07, 1.93, 2.0, 1.97, 1.9, 2.17, 2.0, 2.03, 2.13, 2.03, 1.9, 2.03, 2.13, 2.07, 2.03, 2.13, 1.9, 2.03, 1.97, 1.93, 2.0, 1.97, 1.8],
+          data: [20.03, 20.0, 20.0, 20.0, 20.0, 20.0, 20.0, 19.97, 20.03, 19.97, 20.03, 19.97, 20.03, 20.0, 20.0, 20.0, 20.0, 20.0, 20.0, 20.0, 20.0, 20.0, 20.0, 20.0, 19.97, 20.03, 20.0, 20.0, 20.0, 19.97],
           borderColor: '#58a6ff',
           backgroundColor: 'rgba(88,166,255,0.06)',
           borderWidth: 1.5,
@@ -1333,7 +1327,7 @@ function navigateTo(tabId, anchorId) {
         },
         {
           label: 'Avg RT (ms)',
-          data: [805.1, 856.5, 815.4, 772.0, 922.3, 814.0, 892.4, 853.5, 924.5, 804.6, 783.5, 833.9, 845.6, 848.6, 854.4, 907.2, 837.4, 866.7, 866.2, 796.6, 897.5, 722.0, 850.5, 719.7, 873.7, 801.9, 806.8, 803.7, 757.7, 826.4],
+          data: [906.2, 904.7, 923.1, 885.0, 922.1, 878.9, 916.2, 862.7, 904.5, 886.9, 917.9, 893.7, 888.2, 846.0, 905.5, 949.3, 912.8, 891.5, 881.7, 877.7, 926.0, 909.2, 955.6, 878.4, 878.1, 888.1, 903.0, 897.1, 860.3, 894.4],
           borderColor: '#f78166',
           backgroundColor: 'rgba(247,129,102,0.06)',
           borderWidth: 1.5,
@@ -1420,7 +1414,7 @@ function navigateTo(tabId, anchorId) {
       datasets: [
         {
           label: 'Error Rate (%)',
-          data: [0.0, 0.0, 1.69, 0.0, 0.0, 0.0, 1.67, 1.61, 3.45, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.64, 0.0, 1.61, 1.64, 3.12, 0.0, 0.0, 0.0, 1.72, 1.67, 3.39, 1.85],
+          data: [0.83, 0.83, 1.0, 0.67, 1.0, 1.5, 0.5, 0.5, 1.5, 1.67, 1.33, 1.84, 0.5, 0.33, 1.33, 0.67, 1.0, 1.67, 1.0, 0.83, 1.17, 1.5, 2.0, 1.0, 1.34, 0.83, 1.17, 1.0, 0.67, 0.5],
           borderColor: '#f85149',
           backgroundColor: 'rgba(248,81,73,0.06)',
           borderWidth: 1.5,
@@ -1474,10 +1468,10 @@ function navigateTo(tabId, anchorId) {
   new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: ["Checkout", "Search"],
+      labels: ["Checkout", "Login", "ProductDetails", "Search"],
       datasets: [{
         label: 'P95 Response Time',
-        data: [1898.0, 413.0],
+        data: [2788.25, 562.0, 484.0, 380.0],
         backgroundColor: 'rgba(88,166,255,0.6)',
         borderColor: '#58a6ff',
         borderWidth: 1,
@@ -1590,7 +1584,7 @@ function _showAdvisoryScopeBanner(count, reason) {
   banner.innerHTML = (
     '<span>Filtered by Advisory Scope: ' + count + ' ' + rl + ' endpoint' + (count !== 1 ? 's' : '') + '</span>' +
     '<a href="#" onclick="clearAdvisoryScopeFilter();return false;" ' +
-    'style="color:#f59e0b;font-weight:600;text-decoration:none;margin-left:auto;">✕ Clear filter</a>'
+    'style="color:#f59e0b;font-weight:600;text-decoration:none;margin-left:auto;">âœ• Clear filter</a>'
   );
 
   var table = document.getElementById('endpointTable');
@@ -1663,7 +1657,7 @@ function wireTableFilters() {
     const originalOrder = new Map(allRows.map((row, index) => [row, index]));
     const sortLabels = {
       'endpoint-label': 'Endpoint',
-      'p95-delta': 'Δ P95',
+      'p95-delta': 'Î” P95',
       'p95-current': 'Current P95',
       'error-current': 'Error %',
       'risk-rank': 'Risk',
@@ -1718,7 +1712,7 @@ function wireTableFilters() {
       if (state.sortBy === 'endpoint-label') {
         return state.sortDir === 'asc' ? 'A-Z' : 'Z-A';
       }
-      return state.sortDir === 'asc' ? '↑' : '↓';
+      return state.sortDir === 'asc' ? 'â†‘' : 'â†“';
     }
 
     function syncSortHeaders() {
@@ -1747,16 +1741,16 @@ function wireTableFilters() {
       if (compareResultCount) {
         compareResultCount.textContent = total === 0
           ? 'No endpoint deltas matched the current search.'
-          : 'Showing ' + startIndex + '–' + endIndex + ' of ' + total + ' endpoint deltas' + querySuffix;
+          : 'Showing ' + startIndex + 'â€“' + endIndex + ' of ' + total + ' endpoint deltas' + querySuffix;
       }
       if (comparePageInfo) {
-        comparePageInfo.textContent = 'Page ' + state.page + ' of ' + totalPages + ' · ' + state.pageSize + ' rows per page';
+        comparePageInfo.textContent = 'Page ' + state.page + ' of ' + totalPages + ' Â· ' + state.pageSize + ' rows per page';
       }
       if (compareSortState) {
         compareSortState.textContent = 'Sorted by ' + sortLabel + ' (' + directionLabel + ')';
       }
       if (compareSortDir) {
-        compareSortDir.textContent = state.sortDir === 'asc' ? '↑' : '↓';
+        compareSortDir.textContent = state.sortDir === 'asc' ? 'â†‘' : 'â†“';
         compareSortDir.title = 'Direction: ' + directionLabel;
         compareSortDir.setAttribute('aria-label', 'Toggle compare sort direction. Current: ' + directionLabel);
       }
@@ -1849,7 +1843,7 @@ wireTableFilters();
   if (!ctx) return;
   new Chart(ctx, {
     type: "line",
-    data: {labels: [0.0, 30.0, 60.0, 90.0, 120.0, 150.0, 180.0, 210.0, 240.0, 270.0, 300.0, 330.0, 360.0, 390.0, 420.0, 450.0, 480.0, 510.0, 540.0, 570.0, 600.0, 630.0, 660.0, 690.0, 720.0, 750.0, 780.0, 810.0, 840.0, 870.0], datasets: [{"label":"TPS (req/s)","data":[2.0, 1.97, 1.97, 2.0, 1.93, 2.0, 2.0, 2.07, 1.93, 2.0, 1.97, 1.9, 2.17, 2.0, 2.03, 2.13, 2.03, 1.9, 2.03, 2.13, 2.07, 2.03, 2.13, 1.9, 2.03, 1.97, 1.93, 2.0, 1.97, 1.8],"borderColor":"#58a6ff","backgroundColor":"rgba(88,166,255,0.07)","borderWidth":2,"pointRadius":0,"tension":0.3,"fill":true,"yAxisID":"y","order":1},{"label":"Threads","data":[20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20],"borderColor":"rgba(63,185,80,0.5)","backgroundColor":"rgba(63,185,80,0.10)","borderWidth":1.5,"pointRadius":0,"tension":0.3,"fill":true,"yAxisID":"y1","order":2},]},
+    data: {labels: [0.0, 30.0, 60.0, 90.0, 120.0, 150.0, 180.0, 210.0, 240.0, 270.0, 300.0, 330.0, 360.0, 390.0, 420.0, 450.0, 480.0, 510.0, 540.0, 570.0, 600.0, 630.0, 660.0, 690.0, 720.0, 750.0, 780.0, 810.0, 840.0, 870.0], datasets: [{"label":"TPS (req/s)","data":[20.03, 20.0, 20.0, 20.0, 20.0, 20.0, 20.0, 19.97, 20.03, 19.97, 20.03, 19.97, 20.03, 20.0, 20.0, 20.0, 20.0, 20.0, 20.0, 20.0, 20.0, 20.0, 20.0, 20.0, 19.97, 20.03, 20.0, 20.0, 20.0, 19.97],"borderColor":"#58a6ff","backgroundColor":"rgba(88,166,255,0.07)","borderWidth":2,"pointRadius":0,"tension":0.3,"fill":true,"yAxisID":"y","order":1},{"label":"Threads","data":[80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80, 80],"borderColor":"rgba(63,185,80,0.5)","backgroundColor":"rgba(63,185,80,0.10)","borderWidth":1.5,"pointRadius":0,"tension":0.3,"fill":true,"yAxisID":"y1","order":2},]},
     options: {
       "responsive":true,"maintainAspectRatio":false,
       "interaction":{"mode":"index","intersect":false},
@@ -1864,12 +1858,12 @@ wireTableFilters();
   if (!ctx) return;
   new Chart(ctx, {
     type: "line",
-    data: {labels: [0.0, 30.0, 60.0, 90.0, 120.0, 150.0, 180.0, 210.0, 240.0, 270.0, 300.0, 330.0, 360.0, 390.0, 420.0, 450.0, 480.0, 510.0, 540.0, 570.0, 600.0, 630.0, 660.0, 690.0, 720.0, 750.0, 780.0, 810.0, 840.0, 870.0], datasets: [{"label":"HTTP Error %","data":[0.0, 0.0, 1.69, 0.0, 0.0, 0.0, 1.67, 1.61, 3.45, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.64, 0.0, 1.61, 1.64, 3.12, 0.0, 0.0, 0.0, 1.72, 1.67, 3.39, 1.85],"borderColor":"#f85149","backgroundColor":"rgba(248,81,73,0.08)","borderWidth":1.5,"pointRadius":0,"tension":0.3,"fill":true,"order":1},{"label":"Spike","data":[null, null, 1.69, null, null, null, 1.67, 1.61, 3.45, null, null, null, null, null, null, null, null, null, 1.64, null, 1.61, 1.64, 3.12, null, null, null, 1.72, 1.67, 3.39, 1.85],"type":"scatter","borderColor":"rgba(248,81,73,0.9)","backgroundColor":"rgba(248,81,73,0.65)","pointRadius":5,"pointStyle":"triangle","showLine":false,"order":0}]},
+    data: {labels: [0.0, 30.0, 60.0, 90.0, 120.0, 150.0, 180.0, 210.0, 240.0, 270.0, 300.0, 330.0, 360.0, 390.0, 420.0, 450.0, 480.0, 510.0, 540.0, 570.0, 600.0, 630.0, 660.0, 690.0, 720.0, 750.0, 780.0, 810.0, 840.0, 870.0], datasets: [{"label":"HTTP Error %","data":[0.83, 0.83, 1.0, 0.67, 1.0, 1.5, 0.5, 0.5, 1.5, 1.67, 1.33, 1.84, 0.5, 0.33, 1.33, 0.67, 1.0, 1.67, 1.0, 0.83, 1.17, 1.5, 2.0, 1.0, 1.34, 0.83, 1.17, 1.0, 0.67, 0.5],"borderColor":"#f85149","backgroundColor":"rgba(248,81,73,0.08)","borderWidth":1.5,"pointRadius":0,"tension":0.3,"fill":true,"order":1},{"label":"Spike","data":[0.83, 0.83, 1.0, 0.67, 1.0, 1.5, 0.5, 0.5, 1.5, 1.67, 1.33, 1.84, 0.5, 0.33, 1.33, 0.67, 1.0, 1.67, 1.0, 0.83, 1.17, 1.5, 2.0, 1.0, 1.34, 0.83, 1.17, 1.0, 0.67, 0.5],"type":"scatter","borderColor":"rgba(248,81,73,0.9)","backgroundColor":"rgba(248,81,73,0.65)","pointRadius":5,"pointStyle":"triangle","showLine":false,"order":0}]},
     options: {
       "responsive":true,"maintainAspectRatio":false,
       "interaction":{"mode":"index","intersect":false},
       "plugins":{"legend":{"position":"bottom","labels":{"color":"#8b949e","font":{"size":10,"family":"JetBrains Mono, monospace"}}},"tooltip":{"backgroundColor":"#161b22","titleColor":"#c9d1d9","bodyColor":"#8b949e","borderColor":"#30363d","borderWidth":1}},
-      "scales":{"x":{"title":{"display":true,"text":"Elapsed (s)","color":"#8b949e","font":{"size":10}},"ticks":{"color":"#484f58","font":{"size":9}},"grid":{"color":"rgba(48,54,61,0.4)"}},"y":{"suggestedMax":4.8,"title":{"display":true,       "text":"% of bucket traffic failed","color":"#f85149","font":{"size":10}},"ticks":{"color":"#484f58","font":{"size":9}},"grid":{"color":"rgba(48,54,61,0.4)"}}}
+      "scales":{"x":{"title":{"display":true,"text":"Elapsed (s)","color":"#8b949e","font":{"size":10}},"ticks":{"color":"#484f58","font":{"size":9}},"grid":{"color":"rgba(48,54,61,0.4)"}},"y":{"suggestedMax":3.0,"title":{"display":true,       "text":"% of bucket traffic failed","color":"#f85149","font":{"size":10}},"ticks":{"color":"#484f58","font":{"size":9}},"grid":{"color":"rgba(48,54,61,0.4)"}}}
     }
   });
 })();
@@ -1879,7 +1873,7 @@ wireTableFilters();
   if (!ctx) return;
   new Chart(ctx, {
     type: "scatter",
-    data: {datasets: [{"label":"No Failures","data":[{"x": 2.0, "y": 805.1}, {"x": 1.97, "y": 856.5}, {"x": 2.0, "y": 772.0}, {"x": 1.93, "y": 922.3}, {"x": 2.0, "y": 814.0}, {"x": 2.0, "y": 804.6}, {"x": 1.97, "y": 783.5}, {"x": 1.9, "y": 833.9}, {"x": 2.17, "y": 845.6}, {"x": 2.0, "y": 848.6}, {"x": 2.03, "y": 854.4}, {"x": 2.13, "y": 907.2}, {"x": 2.03, "y": 837.4}, {"x": 1.9, "y": 866.7}, {"x": 2.13, "y": 796.6}, {"x": 1.9, "y": 719.7}, {"x": 2.03, "y": 873.7}, {"x": 1.97, "y": 801.9}],"borderColor":"rgba(63,185,80,0.8)","backgroundColor":"rgba(63,185,80,0.35)","pointRadius":3,"pointHoverRadius":5},{"label":"With Failures","data":[{"x": 1.97, "y": 815.4}, {"x": 2.0, "y": 892.4}, {"x": 2.07, "y": 853.5}, {"x": 1.93, "y": 924.5}, {"x": 2.03, "y": 866.2}, {"x": 2.07, "y": 897.5}, {"x": 2.03, "y": 722.0}, {"x": 2.13, "y": 850.5}, {"x": 1.93, "y": 806.8}, {"x": 2.0, "y": 803.7}, {"x": 1.97, "y": 757.7}, {"x": 1.8, "y": 826.4}],"borderColor":"#f85149","backgroundColor":"rgba(248,81,73,0.5)","pointRadius":4,"pointHoverRadius":6,"pointStyle":"triangle"}]},
+    data: {datasets: [{"label":"With Failures","data":[{"x": 20.03, "y": 906.2}, {"x": 20.0, "y": 904.7}, {"x": 20.0, "y": 923.1}, {"x": 20.0, "y": 885.0}, {"x": 20.0, "y": 922.1}, {"x": 20.0, "y": 878.9}, {"x": 20.0, "y": 916.2}, {"x": 19.97, "y": 862.7}, {"x": 20.03, "y": 904.5}, {"x": 19.97, "y": 886.9}, {"x": 20.03, "y": 917.9}, {"x": 19.97, "y": 893.7}, {"x": 20.03, "y": 888.2}, {"x": 20.0, "y": 846.0}, {"x": 20.0, "y": 905.5}, {"x": 20.0, "y": 949.3}, {"x": 20.0, "y": 912.8}, {"x": 20.0, "y": 891.5}, {"x": 20.0, "y": 881.7}, {"x": 20.0, "y": 877.7}, {"x": 20.0, "y": 926.0}, {"x": 20.0, "y": 909.2}, {"x": 20.0, "y": 955.6}, {"x": 20.0, "y": 878.4}, {"x": 19.97, "y": 878.1}, {"x": 20.03, "y": 888.1}, {"x": 20.0, "y": 903.0}, {"x": 20.0, "y": 897.1}, {"x": 20.0, "y": 860.3}, {"x": 19.97, "y": 894.4}],"borderColor":"#f85149","backgroundColor":"rgba(248,81,73,0.5)","pointRadius":4,"pointHoverRadius":6,"pointStyle":"triangle"}]},
     options: {
       "responsive":true,"maintainAspectRatio":false,
       "plugins":{"legend":{"position":"bottom","labels":{"color":"#8b949e","font":{"size":10,"family":"JetBrains Mono, monospace"}}},"tooltip":{"backgroundColor":"#161b22","titleColor":"#c9d1d9","bodyColor":"#8b949e","borderColor":"#30363d","borderWidth":1}},
@@ -1893,7 +1887,7 @@ wireTableFilters();
   if (!ctx) return;
   new Chart(ctx, {
     type: "line",
-    data: {labels: [0.0, 30.0, 60.0, 90.0, 120.0, 150.0, 180.0, 210.0, 240.0, 270.0, 300.0, 330.0, 360.0, 390.0, 420.0, 450.0, 480.0, 510.0, 540.0, 570.0, 600.0, 630.0, 660.0, 690.0, 720.0, 750.0, 780.0, 810.0, 840.0, 870.0], datasets: [{"label":"Avg RT (ms)","data":[805.1, 856.5, 815.4, 772.0, 922.3, 814.0, 892.4, 853.5, 924.5, 804.6, 783.5, 833.9, 845.6, 848.6, 854.4, 907.2, 837.4, 866.7, 866.2, 796.6, 897.5, 722.0, 850.5, 719.7, 873.7, 801.9, 806.8, 803.7, 757.7, 826.4],"borderColor":"#f78166","backgroundColor":"rgba(247,129,102,0.07)","borderWidth":2,"pointRadius":0,"tension":0.3,"fill":true},{"label":"Connect Time (ms)","data":[46.0, 46.8, 44.9, 45.4, 48.0, 46.9, 46.9, 44.1, 48.2, 47.9, 44.7, 44.1, 48.3, 47.6, 45.9, 44.8, 47.9, 45.5, 45.9, 47.7, 45.5, 45.4, 45.4, 45.2, 47.6, 48.4, 46.0, 45.6, 48.0, 47.8],"borderColor":"rgba(121,192,255,0.55)","backgroundColor":"transparent","borderWidth":1,"borderDash":[4,3],"pointRadius":0,"tension":0.3,"fill":false},{"label":"Latency (ms)","data":[606.0, 656.3, 613.8, 571.6, 716.6, 612.9, 683.3, 651.1, 719.1, 606.8, 583.7, 640.8, 639.7, 634.0, 657.2, 703.2, 628.1, 655.8, 663.0, 596.3, 692.7, 524.2, 648.5, 532.8, 675.7, 601.1, 605.3, 599.3, 559.2, 627.7],"borderColor":"rgba(210,168,255,0.6)","backgroundColor":"transparent","borderWidth":1,"pointRadius":0,"tension":0.3,"fill":false},]},
+    data: {labels: [0.0, 30.0, 60.0, 90.0, 120.0, 150.0, 180.0, 210.0, 240.0, 270.0, 300.0, 330.0, 360.0, 390.0, 420.0, 450.0, 480.0, 510.0, 540.0, 570.0, 600.0, 630.0, 660.0, 690.0, 720.0, 750.0, 780.0, 810.0, 840.0, 870.0], datasets: [{"label":"Avg RT (ms)","data":[906.2, 904.7, 923.1, 885.0, 922.1, 878.9, 916.2, 862.7, 904.5, 886.9, 917.9, 893.7, 888.2, 846.0, 905.5, 949.3, 912.8, 891.5, 881.7, 877.7, 926.0, 909.2, 955.6, 878.4, 878.1, 888.1, 903.0, 897.1, 860.3, 894.4],"borderColor":"#f78166","backgroundColor":"rgba(247,129,102,0.07)","borderWidth":2,"pointRadius":0,"tension":0.3,"fill":true},{"label":"Connect Time (ms)","data":[33.0, 32.3, 32.6, 32.8, 33.1, 32.4, 33.2, 33.0, 32.8, 32.6, 32.7, 32.5, 32.3, 31.5, 32.4, 32.8, 32.3, 32.6, 32.8, 32.5, 32.2, 32.4, 32.3, 32.5, 32.6, 32.3, 33.3, 33.1, 32.2, 32.9],"borderColor":"rgba(121,192,255,0.55)","backgroundColor":"transparent","borderWidth":1,"borderDash":[4,3],"pointRadius":0,"tension":0.3,"fill":false},{"label":"Latency (ms)","data":[825.8, 826.3, 843.0, 806.1, 843.3, 798.6, 838.6, 784.3, 825.7, 807.9, 837.2, 814.9, 810.3, 766.0, 826.4, 867.3, 834.1, 810.9, 801.1, 800.5, 843.7, 828.1, 876.4, 799.6, 797.8, 809.7, 825.4, 817.2, 781.7, 814.8],"borderColor":"rgba(210,168,255,0.6)","backgroundColor":"transparent","borderWidth":1,"pointRadius":0,"tension":0.3,"fill":false},]},
     options: {
       "responsive":true,"maintainAspectRatio":false,
       "interaction":{"mode":"index","intersect":false},
